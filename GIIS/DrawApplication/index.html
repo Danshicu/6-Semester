@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Графический редактор</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #container {
+            display: flex;
+            align-items: flex-start;
+            margin: 0px;
+            display: inline;
+            float: left;
+        }
+
+        #canvasContainer {
+            margin-right: 150px;
+            display: inline;
+            float: left;
+        }
+
+        canvas {
+            border: 3px solid #ccc;
+            display: inline;
+            float: left;
+        }
+
+        #toolPanel {
+            width: 500px;
+            height: 120px;
+            padding: 7px;
+            border: 1px solid #1bce24;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            display: inline;
+            float: left;
+        }
+
+        #devPanel {
+            width: 150px;
+            height: 120px;
+            padding: 7px;
+            border: 1px solid #1bce24;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            display: inline;
+            float: left;
+        }
+
+        .fLinesToolGroup {
+            display: inline;
+            margin-bottom: 10px;
+            float: left;
+
+        }
+
+        .fLinesToolGroup label {
+            display: inline;
+            margin-bottom: 5px;
+            font-weight: bold;
+            float: left;
+        }
+
+        .tool {
+            display: inline;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            float: left;
+        }
+
+
+        .tool input[type="radio"] {
+            display: inline;
+            margin-right: 5px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="toolPanel">
+            <div class="fLinesToolGroup">
+                <label>Линии первого порядка</label><br>
+                <div class="tool">
+                    <input type="radio" name="tool" value="dda" id="tool-dda" checked>
+                    <label for="tool-dda">ЦДА-линия</label>
+                </div><br>
+                <div class="tool">
+                    <input type="radio" name="tool" value="bresenham" id="tool-bresenham">
+                    <label for="tool-bresenham">Линия Брезенхэма</label>
+                </div><br>
+                <div class="tool">
+                    <input type="radio" name="tool" value="wu" id="tool-wu">
+                    <label for="tool-wu">Линия Ву</label>
+                </div><br>
+            </div>
+            <div class="toolGroup">
+                <label>Линии второго порядка</label><br>
+                <div class="tool">
+                    <input type="radio" name="tool" value="circle" id="tool-circle">
+                    <label for="tool-circle">Окружность</label>
+                </div><br>
+                <!--
+                <div class="tool">
+                    <input type="radio" name="tool" value="bresenham" id="tool-bresenham">
+                    <label for="tool-bresenham">Линия Брезенхэма</label>
+                </div><br>
+                <div class="tool">
+                    <input type="radio" name="tool" value="wu" id="tool-wu">
+                    <label for="tool-wu">Линия Ву</label>
+                </div><br>
+                -->
+            </div>
+        </div>
+        <div id="devPanel">
+            <div class="debugTool">
+                Dev<br>
+                <div class="labelInBox">
+                    <input type="checkbox" name="debugSwitch" id="tool-debug">
+                    <label for="tool-debug">Режим отладки</label>
+                </div>
+            </div>
+        </div>
+        <div id="canvasContainer">
+            <canvas id="cnv" width="1600" height="800"></canvas>
+        </div>
+    </div>
+    <script defer src="linesDraw.js"></script>
+</body>
+
+</html>

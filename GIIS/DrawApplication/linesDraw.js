@@ -121,6 +121,39 @@ const drawWuLine = async (x1, y1, x2, y2, selectedMode) =>
     }
 }
 
+function drawCirclePoints(xc, yc, x, y)
+{
+    mCanvas.fillRect(xc+x, yc+y, 1, 1); 
+    mCanvas.fillRect(xc-x, yc+y, 1, 1); 
+    mCanvas.fillRect(xc+x, yc-y, 1, 1); 
+    mCanvas.fillRect(xc-x, yc-y, 1, 1); 
+    mCanvas.fillRect(xc+y, yc+x, 1, 1); 
+    mCanvas.fillRect(xc-y, yc+x, 1, 1); 
+    mCanvas.fillRect(xc+y, yc-x, 1, 1); 
+    mCanvas.fillRect(xc-y, yc-x, 1, 1); 
+}
+
+const drawCircleBresenham = async (xc, yc, x1, y1, selectedMode) =>{
+    let r = Math.sqrt(Math.pow((x1-xc),2)+Math.pow((y1-yc),2));
+    let x = r;
+    let y = 0;
+    let err = 0;
+    console.log(xc, yc, x1, y1, r);
+    while (x >= y) {
+        drawCirclePoints(xc, yc, x, y)
+
+        if (err <= 0) {
+            y += 1;
+            err += 2 * y + 1;
+        }
+        
+        if (err > 0) {
+            x -= 1;
+            err -= 2 * x + 1;
+        }
+    }
+}
+
 const drawTemporaryCross = (x, y) => {
     tempCanvas.strokeStyle = 'red';
     tempCanvas.lineWidth = 2;
@@ -171,6 +204,15 @@ topCanvas.addEventListener("click", function(event) {
                 drawPoints.start = [x, y]
             } else {
                 drawWuLine(drawPoints.start[0], drawPoints.start[1], x, y, selectedMode)
+                deinitCtx()
+            }
+        },
+
+        circle: () => {
+            if (isInited) {
+                drawPoints.start = [x, y]
+            } else {
+                drawCircleBresenham(drawPoints.start[0], drawPoints.start[1], x, y, selectedMode)
                 deinitCtx()
             }
         },
