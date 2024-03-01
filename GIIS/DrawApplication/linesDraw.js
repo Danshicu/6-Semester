@@ -53,8 +53,6 @@ const drawDDALine = async (x1, y1, x2, y2, selectedMode) => {
            await waitingKeypress();
         }
     }
-
-    
 }
 
 const drawBresenhamLine = async (x1, y1, x2, y2, selectedMode) => {
