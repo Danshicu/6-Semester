@@ -20,20 +20,18 @@ topCanvas.addEventListener("click", (event) => {
 document.body.appendChild(topCanvas);
 
 const mCanvas = canvas.getContext("2d");*/
-let drawPoints = {}
+let currentType = {};
+let drawPoints = [];
+let toolGroup = fLinesToolGroup;
 let isDrawing = false;
-let clickX, clickY
+let clickX, clickY;
 
 const tryInitCtx = (type) => {
-    if (drawPoints.type !== type) {
-        drawPoints = {type:type}
+    if (currentType.type !== type) {
+        currentType = {type:type}
         return true
     }
     return false
-}
-
-const deinitCtx = () => {
-    drawPoints = {}
 }
 
 const drawDDALine = async (x1, y1, x2, y2) => {
@@ -270,61 +268,210 @@ const drawMathF = async (xc, yc) =>{
     }
 }
 
+const drawErmitLine = async () => {
+    canvas.fillStyle = 'red';
+    for (let i = 0; i < drawPoints.length; i++) {
+        canvas.beginPath();
+        canvas.arc(drawPoints[i].x, drawPoints[i].y, 3, 0, 2 * Math.PI);
+        canvas.fill();
+        canvas.closePath();
+    }
+    canvas.strokeStyle = 'blue';
+    canvas.beginPath();
+    for (let i = 0; i < drawPoints.length - 1; i++) {
+        const p0 = drawPoints[i];
+        const p1 = drawPoints[i + 1];
+        const t0 = i > 0 ? (p1.x - drawPoints[i - 1].x) / 2 : 0;
+        const t1 = i < drawPoints.length - 2 ? (drawPoints[i + 2].x - p0.x) / 2 : 0;
+
+        for (let t = 0; t <= 1; t += 0.01) {
+            const h1 = 2 * Math.pow(t, 3) - 3 * Math.pow(t, 2) + 1;
+            const h2 = -2 * Math.pow(t, 3) + 3 * Math.pow(t, 2);
+            const h3 = Math.pow(t, 3) - 2 * Math.pow(t, 2) + t;
+            const h4 = Math.pow(t, 3) - Math.pow(t, 2);
+
+            const x = h1 * p0.x + h2 * p1.x + h3 * t0 + h4 * t1;
+            const y = h1 * p0.y + h2 * p1.y + h3 * t0 + h4 * t1;
+
+            if (t === 0) {
+                canvas.moveTo(x, y);
+            } else {
+                canvas.lineTo(x, y);
+            }
+        }
+    }
+    canvas.stroke();
+    canvas.closePath();
+}
+
+const drawBesieLine = async () => {
+    canvas.fillStyle = 'red';
+    for (let i = 0; i < drawPoints.length; i++) {
+        canvas.beginPath();
+        canvas.arc(drawPoints[i].x, drawPoints[i].y, 3, 0, 2 * Math.PI);
+        canvas.fill();
+        canvas.closePath();
+    }
+    canvas.strokeStyle = 'blue';
+    canvas.beginPath();
+    if (drawPoints.length >= 4 && (drawPoints.length - 1) % 3 === 0) {
+        for (let i = 0; i < drawPoints.length - 1; i += 3) {
+            const p0 = drawPoints[i];
+            const p1 = drawPoints[i + 1];
+            const p2 = drawPoints[i + 2];
+            const p3 = drawPoints[i + 3];
+
+            const iterations = 10000; // Количество итераций дискретизации
+
+            for (let j = 0; j <= iterations; j++) {
+                const t = j / iterations;
+
+                const x =
+                    Math.pow(1 - t, 3) * p0.x +
+                    3 * Math.pow(1 - t, 2) * t * p1.x +
+                    3 * (1 - t) * Math.pow(t, 2) * p2.x +
+                    Math.pow(t, 3) * p3.x;
+                const y =
+                    Math.pow(1 - t, 3) * p0.y +
+                    3 * Math.pow(1 - t, 2) * t * p1.y +
+                    3 * (1 - t) * Math.pow(t, 2) * p2.y +
+                    Math.pow(t, 3) * p3.y;
+
+                if (j === 0) {
+                    canvas.moveTo(x, y);
+                } else {
+                    canvas.lineTo(x, y);
+                }
+            }
+        }
+    }
+    canvas.stroke();
+    canvas.closePath();
+}
+
+const drawSplineLine = async () => {
+    canvas.fillStyle = 'red';
+    for (let i = 0; i < drawPoints.length; i++) {
+        canvas.beginPath();
+        canvas.arc(drawPoints[i].x, drawPoints[i].y, 3, 0, 2 * Math.PI);
+        canvas.fill();
+        canvas.closePath();
+    }
+    canvas.strokeStyle = 'blue';
+    canvas.beginPath();
+    var xScale = d3.scaleLinear()
+    .domain([0, d3.max(drawPoints, d => d.x)])
+    .range([0, d3.max(drawPoints, d => d.x)]);
+
+    var yScale = d3.scaleLinear()
+        .domain([0, d3.max(drawPoints, d => d.y)])
+        .range([0, d3.max(drawPoints, d => d.y)]);
+
+    // Создаем генератор сплайна
+    var lineGenerator = d3.line()
+        .x(d => xScale(d.x))
+        .y(d => yScale(d.y))
+        .curve(d3.curveNatural);
+
+    lineGenerator.context(canvas)(drawPoints);
+
+    canvas.stroke();
+    canvas.closePath();
+}
+
 const useTool = {
     dda: () => {
         {
-            drawDDALine(drawPoints.start[0], drawPoints.start[1], clickX, clickY)
+            drawDDALine(drawPoints.start[0], drawPoints.start[1], clickX, clickY);
         }
     },
 
     bresenham: () => {
         {
-            drawBresenhamLine(drawPoints.start[0], drawPoints.start[1], clickX, clickY)
+            drawBresenhamLine(drawPoints.start[0], drawPoints.start[1], clickX, clickY);
         }
     },
 
     wu: () => {
         {
-            drawWuLine(drawPoints.start[0], drawPoints.start[1], clickX, clickY)
+            drawWuLine(drawPoints.start[0], drawPoints.start[1], clickX, clickY);
         }
     },
 
     circle: () => {
        {
-            drawCircleBresenham(drawPoints.start[0], drawPoints.start[1], clickX, clickY)
+            drawCircleBresenham(drawPoints.start[0], drawPoints.start[1], clickX, clickY);
         }
     },
 
     ellipse: () =>{
         {
-            drawEllipse(Math.abs(clickX-drawPoints.start[0]), Math.abs(clickY-drawPoints.start[1]), drawPoints.start[0], drawPoints.start[1])
+            drawEllipse(Math.abs(clickX-drawPoints.start[0]), Math.abs(clickY-drawPoints.start[1]), drawPoints.start[0], drawPoints.start[1]);
         }
     },
     
     hyperbola: () =>{
         {
-            drawMathF(drawPoints.start[0], drawPoints.start[1])
+            drawMathF(drawPoints.start[0], drawPoints.start[1]);
         }
     },
     
     parabola: () =>{
         {
-            drawMathF(drawPoints.start[0], drawPoints.start[1])
+            drawMathF(drawPoints.start[0], drawPoints.start[1]);
+        }
+    },
+    
+    ermit: () =>{
+        {
+            drawErmitLine();
+        }
+    },
+
+    besie: () =>{
+        {
+            drawBesieLine();
+        }
+    },
+
+    spline: () =>{
+        {
+            drawSplineLine();
         }
     }
+}
+
+function setGroup(group){
+    toolGroup = group;
+}
+
+function addPoint(x, y) {
+    drawPoints.push({ x, y });
 }
 
 cnv.addEventListener("click", function(event) {
     clickX = event.offsetX;
     clickY = event.offsetY;
     const selectedTool = document.querySelector('input[name="tool"]:checked').value;
-    const isInited = tryInitCtx(selectedTool)
-    if(isInited){
-        drawPoints.start = [clickX, clickY]
-    }else{
-        useTool[selectedTool]()
-        deinitCtx()
-    } 
+    const isInited = tryInitCtx(selectedTool);
+    addPoint(clickX, clickY);
+    if(toolGroup!="tLinesToolGroup")
+    {
+        if(isInited){
+            drawPoints.start = [clickX, clickY];
+        }
+        else
+        {
+            useTool[selectedTool]();
+            deletePoints();
+            currentType = {};
+        } 
+    }
+    else
+    {
+        clearCanvas();
+        useTool[selectedTool]();
+    }
 });
 
 
@@ -343,4 +490,13 @@ function waitingKeypress() {
 
 function clearCanvas() {
     canvas.clearRect(0, 0, cnv.width, cnv.height);
+}
+
+function deletePoints(){
+    drawPoints = [];
+}
+
+function clearAll(){
+    clearCanvas();
+    deletePoints();
 }

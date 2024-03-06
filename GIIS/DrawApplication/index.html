@@ -3,6 +3,7 @@
 
 <head>
     <title>Графический редактор</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -51,32 +52,18 @@
             float: left;
         }
 
-        .fLinesToolGroup {
-            display: inline;
-            margin-bottom: 10px;
-            float: left;
-
-        }
-
-        .fLinesToolGroup label {
-            display: inline;
-            margin-bottom: 5px;
-            font-weight: bold;
-            float: left;
-        }
-
-        .sLinesToolGroup {
+        .LinesToolGroup {
             display: inline;
             margin-bottom: 10px;
             margin-left: 10px;
+            font-weight: bold;
             float: left;
 
         }
 
-        .sLinesToolGroup label {
+        .LinesToolGroup label {
             display: inline;
             margin-bottom: 5px;
-            font-weight: bold;
             float: left;
         }
 
@@ -99,7 +86,7 @@
 <body>
     <div id="container">
         <div id="toolPanel">
-            <div class="fLinesToolGroup">
+            <div class="LinesToolGroup" id = "fLinesToolGroup" onClick = "setGroup(id)">
                 <label>Линии первого порядка</label><br>
                 <div class="tool">
                     <input type="radio" name="tool" value="dda" id="tool-dda" checked>
@@ -114,7 +101,7 @@
                     <label for="tool-wu">Линия Ву</label>
                 </div><br>
             </div>
-            <div class="sLinesToolGroup">
+            <div class="LinesToolGroup" id = "sLinesToolGroup" onClick = "setGroup(id)">
                 <label>Линии второго порядка</label><br>
                 <div class="tool">
                     <input type="radio" name="tool" value="circle" id="tool-circle">
@@ -133,6 +120,21 @@
                     <label for="tool-wu">Парабола</label>
                 </div><br>
             </div>
+            <div class="LinesToolGroup" id = "tLinesToolGroup" onClick = "setGroup(id)">
+                <label>Кривые</label><br>
+                <div class="tool">
+                    <input type="radio" name="tool" value="ermit" id="tool-ermit">
+                    <label for="tool-ermit">Форма Эрмита</label>
+                </div><br>
+                <div class="tool">
+                    <input type="radio" name="tool" value="besie" id="tool-besie">
+                    <label for="tool-besie">Форма Безье</label>
+                </div><br>
+                <div class="tool">
+                    <input type="radio" name="tool" value="spline" id="tool-spline">
+                    <label for="tool-spline">В-сплайн</label>
+                </div><br>
+            </div>
         </div>
         <div id="devPanel">
             <div class="debugTool">
@@ -141,13 +143,14 @@
                     <input type="checkbox" name="debugSwitch" id="tool-debug">
                     <label for="tool-debug">Режим отладки</label>
                 </div>
-                <button onclick="clearCanvas()">Очистить холст</button>
+                <button onclick="clearAll()">Очистить холст</button>
             </div>
         </div>
         <div id="canvasContainer">
             <canvas id="cnv" width="1600" height="800"></canvas>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script defer src="linesDraw.js"></script>
 </body>
 
