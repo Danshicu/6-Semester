@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background: black;
+    overflow: hidden;
+}
+
+.canvas {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    outline: none;
+}
+
+button{
+    background: #444444;
+    margin-left: 20px;
+}
+input{
+    margin-left: 20px;
+}
+label{
+    background: #444444;
+}
