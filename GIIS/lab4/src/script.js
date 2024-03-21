@@ -75,11 +75,13 @@ window.addEventListener('dblclick', () => {
 const cube_button = document.getElementById("cube")
 const sphere_button = document.getElementById("sphere")
 const prisma_button = document.getElementById("prisma")
+const cylinder_button = document.getElementById("cylinder")
 const drag_drop_button = document.getElementById("dragdrop")
 
 cube_button.addEventListener('click', add_cube)
 sphere_button.addEventListener('click', add_sphere)
 prisma_button.addEventListener('click', add_prisma)
+cylinder_button.addEventListener('click', add_cylinder)
 drag_drop_button.addEventListener('click', drag_drop)
 
 
@@ -123,6 +125,20 @@ function add_prisma(){
 	mesh_prisma.isDraggable= true;
 	scene.add(mesh_prisma);
 	figures.push(mesh_prisma);
+}
+
+function add_cylinder(){
+	turnOnControls()
+	const geometry = new THREE.CylinderGeometry(0.8, 0.8, 1, 10);
+	const material = new THREE.MeshBasicMaterial({
+		color: 'gray',
+		wireframe: true,
+	});
+	const mesh = new THREE.Mesh(geometry, material);
+	mesh.position.y = 0.51
+	mesh.isDraggable= true;
+	scene.add(mesh);
+	figures.push(mesh);
 }
 
 function turnOnControls(){
