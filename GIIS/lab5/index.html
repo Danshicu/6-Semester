@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Простой графический редактор</title>
+    <style>
+        #canvas {
+            border: 1px solid black;
+            margin-top: 0.6%;
+        }
+    </style>
+</head>
+<body>
+<button onclick="startPolygon()">Начать полигон</button>
+<button onclick="checkConvexity()">Проверить выпуклость</button>
+<button onclick="calculateNormals()">Рассчитать нормали</button>
+<button onclick="computeConvexHullGraham()">Выпуклая оболочка (Грэхем)</button>
+<button onclick="computeConvexHullJarvis()">Выпуклая оболочка (Джарвис)</button>
+<button onClick="clearCanvas()">Очистить</button>
+<div id="devPanel">
+    <div class="debugTool">
+        Dev<br>
+        <div class="labelInBox">
+            <input type="checkbox" name="debugSwitch" id="tool-debug">
+            <label for="tool-debug">Режим отладки</label>
+        </div>
+    </div>
+</div>
+<br>
+<canvas id="canvas" width="1000" height="800"></canvas>
+<script defer src="polygonScript.js"></script>
+</body>
+</html>
