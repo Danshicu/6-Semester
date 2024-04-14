@@ -1,15 +1,130 @@
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
     let points = [];
+    let checkPoints = [];
     let isDrawing = false;
+    let isChecking = false;
+    let isCheckingPoint = false;
 
     function startPolygon() {
         isDrawing = !isDrawing;
+        isChecking=false;
+        isCheckingPoint = false;
+        canvas.removeEventListener("click", checkPointBelongsPolygon);
+        canvas.removeEventListener("click", addCheckPoint);
         if (isDrawing) {
             canvas.addEventListener("click", addPoint);
         } else {
             canvas.removeEventListener("click", addPoint);
         }
+    }
+
+    function checkPoint(){
+        isChecking = false;
+        isDrawing=false;
+        isCheckingPoint = !isCheckingPoint;
+        canvas.removeEventListener("click", addPoint);
+        canvas.removeEventListener("click", addCheckPoint);
+        if (isCheckingPoint) {
+            canvas.addEventListener("click", checkPointBelongsPolygon);
+        } else {
+            canvas.removeEventListener("click", checkPointBelongsPolygon);
+            checkPoints = [];
+            drawPolygon();
+        }
+    }
+
+    function startCheck(){
+        isChecking = !isChecking;
+        isDrawing=false;
+        isCheckingPoint = false;
+        canvas.removeEventListener("click", addPoint);
+        canvas.removeEventListener("click", checkPointBelongsPolygon);
+        if (isChecking) {
+            canvas.addEventListener("click", addCheckPoint);
+        } else {
+            canvas.removeEventListener("click", addCheckPoint);
+            checkPoints = [];
+            drawPolygon();
+        }
+    }
+
+    function checkPointBelongsPolygon(event){
+        let interPoints = [];
+        const rect = canvas.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        const y1 = canvas.getBoundingClientRect().height-1;
+        for (let i = 0; i < points.length; i++) {
+            const point = points[i];
+            if (i > 0) {
+                const prevPoint = points[i - 1];
+                var interPoint = {x:0, y:0}
+                if(get_line_intersection(x,y,x,y1,point.x,point.y,prevPoint.x,prevPoint.y, interPoint)){    
+                    interPoints.push({interPoint});
+                }
+            }
+        }
+        if (points.length > 2) {
+            const firstPoint = points[0];
+            const lastPoint = points[points.length - 1];
+            var interPoint = {x:0, y:0}
+                if(get_line_intersection(x,y,x,y1,firstPoint.x,firstPoint.y,lastPoint.x,lastPoint.y, interPoint)){    
+                    interPoints.push({interPoint});
+                }
+        }
+        
+        if(interPoints.length % 2 === 0){
+            alert("Точка не принадлежит полигону")
+            drawPoint(x,y, 'red');
+        }
+        else{
+            alert("Точка принадлежит полигону")
+            drawPoint(x,y, 'green');
+        }
+    }
+
+    function addCheckPoint(event){
+        let interPoints = [];
+        const rect = canvas.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        checkPoints.push({x,y});
+        drawPoint(x,y);
+        if(checkPoints.length===2){
+            let x1 = checkPoints[0].x;
+            let y1 = checkPoints[0].y;
+            drawLine(x1, y1, x, y, 'red');
+            for (let i = 0; i < points.length; i++) {
+                const point = points[i];
+                if (i > 0) {
+                    const prevPoint = points[i - 1];
+                    var interPoint = {x:0, y:0}
+                    if(get_line_intersection(x,y,x1,y1,point.x,point.y,prevPoint.x,prevPoint.y, interPoint)){    
+                        interPoints.push({interPoint});
+                    }
+                }
+            }
+            if (points.length > 2) {
+                const firstPoint = points[0];
+                const lastPoint = points[points.length - 1];
+                var interPoint = {x:0, y:0}
+                    if(get_line_intersection(x,y,x1,y1,firstPoint.x,firstPoint.y,lastPoint.x,lastPoint.y, interPoint)){    
+                        interPoints.push({interPoint});
+                    }
+            }
+        }
+        for(let i=0; i<interPoints.length; i++){
+            let point = interPoints[i].interPoint;
+            const X = point.x;
+            const Y = point.y;
+            drawPoint(X, Y, 'green')
+        };
+        if(checkPoints.length===3){
+            checkPoints = [];
+            drawPolygon();
+        }
+
     }
 
     function addPoint(event) {
@@ -258,8 +373,30 @@
              }
         }
     }
+
+    function get_line_intersection(p0_x, p0_y, p1_x, p1_y, p2_x, p2_y, p3_x, p3_y, interPoint)
+    {
+        let s1_x, s1_y, s2_x, s2_y;
+        s1_x = p1_x - p0_x;     s1_y = p1_y - p0_y;
+        s2_x = p3_x - p2_x;     s2_y = p3_y - p2_y;
+    
+        let s, t;
+        s = (-s1_y * (p0_x - p2_x) + s1_x * (p0_y - p2_y)) / (-s2_x * s1_y + s1_x * s2_y);
+        t = ( s2_x * (p0_y - p2_y) - s2_y * (p0_x - p2_x)) / (-s2_x * s1_y + s1_x * s2_y);
+    
+        if (s >= 0 && s <= 1 && t >= 0 && t <= 1)
+        {
+            // Collision detected
+            interPoint.x = p0_x + (t * s1_x);
+            interPoint.y = p0_y + (t * s1_y);
+            return true;
+        }
+        return false; // No collision
+    }
+
     function clearCanvas(){
         isDrawing = false;
+        isChecking = false;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         points = [];
     }
