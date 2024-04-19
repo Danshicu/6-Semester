@@ -5,6 +5,7 @@
     let isDrawing = false;
     let isChecking = false;
     let isCheckingPoint = false;
+    let seeding = false;
 
     function startPolygon() {
         isDrawing = !isDrawing;
@@ -12,6 +13,7 @@
         isCheckingPoint = false;
         canvas.removeEventListener("click", checkPointBelongsPolygon);
         canvas.removeEventListener("click", addCheckPoint);
+        canvas.removeEventListener("click", fillPolydonBySeed);
         if (isDrawing) {
             canvas.addEventListener("click", addPoint);
         } else {
@@ -25,6 +27,7 @@
         isCheckingPoint = !isCheckingPoint;
         canvas.removeEventListener("click", addPoint);
         canvas.removeEventListener("click", addCheckPoint);
+        canvas.removeEventListener("click", fillPolydonBySeed);
         if (isCheckingPoint) {
             canvas.addEventListener("click", checkPointBelongsPolygon);
         } else {
@@ -40,12 +43,22 @@
         isCheckingPoint = false;
         canvas.removeEventListener("click", addPoint);
         canvas.removeEventListener("click", checkPointBelongsPolygon);
+        canvas.removeEventListener("click", fillPolydonBySeed);
         if (isChecking) {
             canvas.addEventListener("click", addCheckPoint);
         } else {
             canvas.removeEventListener("click", addCheckPoint);
             checkPoints = [];
             drawPolygon();
+        }
+    }
+
+    function fillSeed(){
+        seeding = !seeding
+        if(seeding){
+            canvas.addEventListener("click", fillPolydonBySeed);
+        }else{
+            canvas.removeEventListener("click", fillPolydonBySeed);
         }
     }
 
@@ -386,9 +399,12 @@
     
         if (s >= 0 && s <= 1 && t >= 0 && t <= 1)
         {
+            if(interPoint != undefined)
+            {
             // Collision detected
             interPoint.x = p0_x + (t * s1_x);
             interPoint.y = p0_y + (t * s1_y);
+            }
             return true;
         }
         return false; // No collision
@@ -411,4 +427,167 @@
             }
           }
       });
+    }
+
+    const fillPolygonByLine = async(fillColor = "black") => 
+    {
+        // Находим границы многоугольника
+        let minY = Infinity;
+        let maxY = -Infinity;
+        for (let i = 0; i < points.length; i++) {
+            const point = points[i];
+            minY = Math.min(minY, point.y);
+            maxY = Math.max(maxY, point.y);
+        }
+    
+        // Проходимся по каждой строке и заполняем многоугольник
+        for (let y = minY; y <= maxY; y++) {
+            let intersections = [];
+    
+            // Находим пересечения со сторонами многоугольника
+            for (let i = 0; i < points.length; i++) {
+                const p1 = points[i];
+                const p2 = points[(i + 1) % points.length];
+    
+                // Проверяем, пересекает ли горизонтальная линия сторону многоугольника
+                if ((p1.y <= y && p2.y > y) || (p2.y <= y && p1.y > y)) {
+                    // Вычисляем x координату пересечения
+                    const intersectionX = (y - p1.y) / (p2.y - p1.y) * (p2.x - p1.x) + p1.x;
+                    intersections.push(intersectionX);
+                }
+            }
+    
+            // Сортируем пересечения, чтобы получить отрезки для закраски
+            intersections = intersections.sort((a, b) => a - b);
+    
+            // Закрашиваем каждый отрезок
+            for (let i = 0; i < intersections.length; i += 2) {
+                const x1 = Math.ceil(intersections[i]);
+                const x2 = Math.floor(intersections[i + 1]);
+                for (let x = x1; x < x2; x++) {
+                    ctx.fillStyle = fillColor;
+                    ctx.fillRect(x, y, 1, 1);
+                }
+                if(checkMode() === true){
+                    await waitingKeypress();
+                 }
+            }
+        }
+    }
+
+    const fillPolydonBySeed = async(event) => {
+        const rect = canvas.getBoundingClientRect();
+        const startX = event.clientX - rect.left;
+        const startY = event.clientY - rect.top;
+        fill(startX, startY);
+    }
+      
+    globalColor = { r: 0, g: 0, b: 0, a: 1 };
+      
+    function plot(x, y, c) {
+    if (isFinite(x) && isFinite(y)) {
+        const color = {
+        r: globalColor.r,
+        g: globalColor.g,
+        b: globalColor.b,
+        a: globalColor.a * c,
+        };
+
+        setPixel(x, y, color);
+        }
+    }
+      
+    function setPixel(x, y, c) {
+        c = c || 1;
+        const p = ctx.createImageData(1, 1);
+        p.data[0] = c.r;
+        p.data[1] = c.g;
+        p.data[2] = c.b;
+        p.data[3] = c.a * 255; // Умножаем на 255, чтобы получить значение в диапазоне от 0 до 255
+        const data = ctx.getImageData(x, y, 1, 1).data;
+        if (data[3] <= p.data[3]) {
+        ctx.putImageData(p, x, y);
+        }
+    }
+    
+    function fill(x, y) {
+        const startColor = ctx.getImageData(x, y, 1, 1).data;
+        const q = [[x, y]];
+        for (let i = 0; i !== q.length; i++) {
+        const x = q[i][0],
+            y = q[i][1];
+        const data = ctx.getImageData(x, y, 1, 1).data;
+        if (
+            x >= 0 &&
+            y >= 0 &&
+            x < canvas.width &&
+            y < canvas.height &&
+            data[0] === startColor[0] &&
+            data[1] === startColor[1] &&
+            data[2] === startColor[2] &&
+            data[3] === startColor[3]
+        ) {
+            plot(x, y, 1);
+            const s = q.length;
+            q[s] = [x + 1, y];
+            q[s + 1] = [x - 1, y];
+            q[s + 2] = [x, y + 1];
+            q[s + 3] = [x, y - 1];
+        }
+        }
+    }
+
+    listOfYLists = {};
+        
+    function rastrHorizontalEdges(edge) {
+        let y = Math.ceil(edge[0].y);
+        let dy = edge[1].y - edge[0].y > 0 ? 1 : -1;
+        let dx = (edge[1].x - edge[0].x) / (edge[1].y - edge[0].y);
+        let x = edge[0].x;
+        while (y <= edge[1].y) {
+        console.log(listOfYLists[{y}]);
+        if (!listOfYLists[{y}]) {
+            listOfYLists[{y}] = [x];
+        } else {
+            listOfYLists[{y}].push(x);
+        }
+    
+        y++;
+        x += dx;
+        }
+    }
+    
+    function sortListRow() {
+        for (let key in listOfYLists) {
+        listOfYLists[key].sort((a, b) => a - b);
+        }
+    }
+    
+    function getIntervals() {
+        const intervals = [];
+        for (let i = 0; i < points.length - 1; i++) {
+        rastrHorizontalEdges(
+            [points[i], points[i + 1]].sort((a, b) => a.y - b.y)
+        );
+        }
+        sortListRow();
+    
+        for (let key in listOfYLists) {
+        for (let i = 0; i < listOfYLists[key].length; i += 2) 
+        {
+            intervals.push(
+            {
+                start: {
+                    x: listOfYLists[key][i],
+                    y: Number(key),
+                },
+                end: {
+                    x: listOfYLists[key][i + 1],
+                    y: Number(key),
+                },
+                });
+            }
+        }
+    
+        fillPolygonByLine()
     }
