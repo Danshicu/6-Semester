@@ -1,0 +1,48 @@
+{    
+    "POS_FULL_NAMES": {
+        "NOUN": "Noun",
+        "PROPN": "Proper noun",
+        "VERB": "Verb",
+        "AUX": "Auxillary verb",
+        "ADJ": "Adjective",
+        "ADV": "Adverb",
+        "PRON": "Pronoun",
+        "ADP": "Adposition",
+        "CONJ": "Coordinating conjunction",
+        "SCONJ": "Subordinating conjunction",
+        "INTJ": "Interjenction",
+        "DET": "Determiner",
+        "NUM": "Numeral",
+        "PART": "Particle",
+        "X": "Unknown"
+    },
+    "POS_TAGS_LIST": {
+        "NOUN": ["NN", "NNS"],
+        "PROPN": ["NNP", "NNPS"],
+        "VERB": ["VB", "VBD", "VBG", "VBN", "VBP", "VBZ"],
+        "AUX": ["VB", "VBD", "VBG", "VBN", "VBP", "VBZ"],
+        "ADJ": ["JJ", "JJR", "JJS"],
+        "ADV": ["RB", "RBR", "RBS", "WRB"],
+        "PRON": ["PRP", "PRP$", "WP", "WP$"],
+        "ADP": ["IN"],
+        "CONJ": ["CC"],
+        "SCONJ": ["IN"],
+        "INTJ": ["UH"],
+        "DET": ["DT", "WDT"],
+        "NUM": ["CD"],
+        "PART": ["RP"]
+    },    
+    "SPACY_TAG_LIST": [
+        "AFX", "JJ", "JJR",
+        "JJS", "IN", "RP",
+        "RB", "RBR", "RBS",
+        "WRB", "VB", "VBD",
+        "VBG", "VBN", "VBP",
+        "VBZ", "CC", "DT",
+        "PDT", "PRP$", "WDT",
+        "WP$", "UH", "NN",
+        "NNS", "CD", "POS",
+        "TO", "NNP", "NNPS",
+        "IN", "MD", "XX", "FW"
+    ]    
+}
