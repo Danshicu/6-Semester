@@ -1,0 +1,986 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain/"
+     xml:base="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:SustainTheStrain="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Beat -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Beat">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#BelongsTeam -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#BelongsTeam">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Team"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Generates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Generates">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Building"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Currency"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#ToolOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#ToolOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#CreationTool"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Department"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Uses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Uses">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Currency"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#WorksOver -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#WorksOver">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Worker"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#AttackRadius -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#AttackRadius">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#BuildCost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#BuildCost">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Building"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#BuyCost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#BuyCost">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#CreationTool"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Damage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Damage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Duration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Duration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Effect"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Health -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Health">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Robot"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#ReloadTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#ReloadTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Ability"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Speed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Speed">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Robot"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#UseCost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#UseCost">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Ability"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#health -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#health">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Building"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Ability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Ability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Building -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Building">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#CoreMechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Character -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Character">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Setting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Control -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Control">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#GameDesign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Controller -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Controller">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Control"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#CoreMechanic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#CoreMechanic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#CreationTool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#CreationTool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Technic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Currency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Currency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#CoreMechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Department -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Department">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Technic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#DocumentCreationTool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#DocumentCreationTool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#CreationTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Effect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Effect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Visual"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Energy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Energy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Currency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Entity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#CoreMechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Environment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Environment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#World"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#GameDesign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#GameDesign"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#GameEngine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#GameEngine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#CreationTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#GameplayElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#GameplayElement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Genre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#GameDesign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Mechanic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Mechanic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#GameDesign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Model -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Model">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Visual"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Money -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Money">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Currency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Name -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Name">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#GameDesign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#NarrativeElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#NarrativeElement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#POV -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#POV">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#GameDesign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#PlaceOfAction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#PlaceOfAction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#World"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Platform -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Platform">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Technic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Robot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Robot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Setting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Setting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#GameDesign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Story -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Story">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Setting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Style -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Style">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Visual"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#SubMechanic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#SubMechanic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Team -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Team">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#SubMechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Technic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Technic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Turret -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Turret">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Building"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Visual -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Visual"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#VisualCreationTool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#VisualCreationTool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#CreationTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Worker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Worker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#World -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#World">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Setting"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Barrack -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Barrack">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Building"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#GameplayElement"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Uses"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Money"/>
+            </owl:Restriction>
+        </rdf:type>
+        <SustainTheStrain:BelongsTeam rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Player"/>
+        <SustainTheStrain:Generates rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Main_Robot"/>
+        <SustainTheStrain:BuildCost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500</SustainTheStrain:BuildCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Blender -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Blender">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#VisualCreationTool"/>
+        <SustainTheStrain:ToolOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Visual_3D_Department"/>
+        <SustainTheStrain:BuyCost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</SustainTheStrain:BuyCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Blow -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Blow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Effect"/>
+        <SustainTheStrain:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</SustainTheStrain:Duration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Bridge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Bridge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#GameplayElement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Building_Robots_Revolution -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Building_Robots_Revolution">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Story"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Citadel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Citadel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Building"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#GameplayElement"/>
+        <SustainTheStrain:BelongsTeam rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Player"/>
+        <SustainTheStrain:health rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200</SustainTheStrain:health>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Construction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Construction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#PlaceOfAction"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Style"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Destruction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Destruction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Effect"/>
+        <SustainTheStrain:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</SustainTheStrain:Duration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Enemy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Enemy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Team"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Explosion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Explosion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Ability"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Uses"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Energy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <SustainTheStrain:BelongsTeam rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Player"/>
+        <SustainTheStrain:AttackRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</SustainTheStrain:AttackRadius>
+        <SustainTheStrain:Damage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</SustainTheStrain:Damage>
+        <SustainTheStrain:ReloadTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</SustainTheStrain:ReloadTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Fast_Robot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Fast_Robot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Robot"/>
+        <SustainTheStrain:BelongsTeam rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Enemy"/>
+        <SustainTheStrain:AttackRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</SustainTheStrain:AttackRadius>
+        <SustainTheStrain:Damage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</SustainTheStrain:Damage>
+        <SustainTheStrain:Health rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">35</SustainTheStrain:Health>
+        <SustainTheStrain:Speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</SustainTheStrain:Speed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Figthing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Figthing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#SubMechanic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Freeze -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Freeze">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Ability"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Uses"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Energy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <SustainTheStrain:BelongsTeam rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Player"/>
+        <SustainTheStrain:AttackRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</SustainTheStrain:AttackRadius>
+        <SustainTheStrain:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</SustainTheStrain:Duration>
+        <SustainTheStrain:ReloadTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.0</SustainTheStrain:ReloadTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Gamedesign_department -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Gamedesign_department">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Department"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Isometry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Isometry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#POV"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Landing_Robot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Landing_Robot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Ability"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Robot"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Beat"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Robot"/>
+            </owl:Restriction>
+        </rdf:type>
+        <SustainTheStrain:BelongsTeam rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Player"/>
+        <SustainTheStrain:AttackRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</SustainTheStrain:AttackRadius>
+        <SustainTheStrain:Damage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">35</SustainTheStrain:Damage>
+        <SustainTheStrain:Health rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</SustainTheStrain:Health>
+        <SustainTheStrain:Speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</SustainTheStrain:Speed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Laser -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Laser">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Effect"/>
+        <SustainTheStrain:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</SustainTheStrain:Duration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Laser_Turret -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Laser_Turret">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Turret"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Beat"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Robot"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Uses"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Money"/>
+            </owl:Restriction>
+        </rdf:type>
+        <SustainTheStrain:BelongsTeam rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Player"/>
+        <SustainTheStrain:AttackRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</SustainTheStrain:AttackRadius>
+        <SustainTheStrain:BuildCost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">600</SustainTheStrain:BuildCost>
+        <SustainTheStrain:Damage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</SustainTheStrain:Damage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Main_Robot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Main_Robot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Robot"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Beat"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Robot"/>
+            </owl:Restriction>
+        </rdf:type>
+        <SustainTheStrain:BelongsTeam rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Player"/>
+        <SustainTheStrain:AttackRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</SustainTheStrain:AttackRadius>
+        <SustainTheStrain:Damage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25</SustainTheStrain:Damage>
+        <SustainTheStrain:Health rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70</SustainTheStrain:Health>
+        <SustainTheStrain:Speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</SustainTheStrain:Speed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Mine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Mine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#SubMechanic"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Generates"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Money"/>
+            </owl:Restriction>
+        </rdf:type>
+        <SustainTheStrain:BelongsTeam rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Player"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Mouse_and_Keyboard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Mouse_and_Keyboard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Controller"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Notion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Notion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#DocumentCreationTool"/>
+        <SustainTheStrain:ToolOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Gamedesign_department"/>
+        <SustainTheStrain:BuyCost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</SustainTheStrain:BuyCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#PC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#PC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Platform"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Photoshop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Photoshop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#VisualCreationTool"/>
+        <SustainTheStrain:ToolOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Visual_2D_Department"/>
+        <SustainTheStrain:BuyCost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23</SustainTheStrain:BuyCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Place_of_building -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Place_of_building">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Building"/>
+        <SustainTheStrain:BelongsTeam rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Player"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Player -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Player">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Team"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Power_Station -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Power_Station">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Building"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Generates"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Energy"/>
+            </owl:Restriction>
+        </rdf:type>
+        <SustainTheStrain:BuildCost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300</SustainTheStrain:BuildCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Pramchuk_Daniil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Pramchuk_Daniil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Worker"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#WorksOver"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#GameDesign"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#WorksOver"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Technic"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#WorksOver"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Visual"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Realism -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Realism">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Style"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Rocket -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Rocket">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Effect"/>
+        <SustainTheStrain:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</SustainTheStrain:Duration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Rocket_Turret -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Rocket_Turret">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Turret"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Beat"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Robot"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Uses"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Money"/>
+            </owl:Restriction>
+        </rdf:type>
+        <SustainTheStrain:BelongsTeam rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Player"/>
+        <SustainTheStrain:AttackRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</SustainTheStrain:AttackRadius>
+        <SustainTheStrain:BuildCost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">600</SustainTheStrain:BuildCost>
+        <SustainTheStrain:Damage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</SustainTheStrain:Damage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Shoot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Shoot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Effect"/>
+        <SustainTheStrain:Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.15</SustainTheStrain:Duration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Shooting -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Shooting">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#CoreMechanic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Sustain_The_Strain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Sustain_The_Strain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Name"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Tank_Robot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Tank_Robot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Robot"/>
+        <SustainTheStrain:BelongsTeam rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Enemy"/>
+        <SustainTheStrain:AttackRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</SustainTheStrain:AttackRadius>
+        <SustainTheStrain:Damage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45</SustainTheStrain:Damage>
+        <SustainTheStrain:Health rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90</SustainTheStrain:Health>
+        <SustainTheStrain:Speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</SustainTheStrain:Speed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Tower_Defence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Tower_Defence">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Traveling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Traveling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#SubMechanic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Unity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Unity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#GameEngine"/>
+        <SustainTheStrain:ToolOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Unity_Development_Department"/>
+        <SustainTheStrain:BuyCost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</SustainTheStrain:BuyCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Unity_Development_Department -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Unity_Development_Department">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Department"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Visual_2D_Department -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Visual_2D_Department">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Department"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Visual_3D_Department -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Visual_3D_Department">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Department"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#3DSMax -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#3DSMax">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#VisualCreationTool"/>
+        <SustainTheStrain:ToolOf rdf:resource="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#Visual_3D_Department"/>
+        <SustainTheStrain:BuyCost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">235</SustainTheStrain:BuyCost>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
