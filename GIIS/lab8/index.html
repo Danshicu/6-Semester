@@ -5,15 +5,20 @@
     <style>
         #canvas {
             border: 1px solid black;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: auto;
+            display: block;
         }
     </style>
 </head>
 <body>
 <div>
-    <button id="cButton">Cohen-Sutherland</button>
-    <button id="lButton">Liang-Barsky</button>
+    <center><button id="cButton">Cohen-Sutherland</button>
+    <button id="lButton">Liang-Barsky</button></center>
 </div>
-<canvas id="canvas" width="500" height="500"></canvas>
+<canvas id="canvas" width="1000" height="800"></canvas>
 
 <script>
     const canvas = document.getElementById('canvas');

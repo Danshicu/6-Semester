@@ -1,0 +1,764 @@
+Prefix: : <http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain/>
+Prefix: SustainTheStrain: <http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain>
+
+
+Datatype: xsd:decimal
+
+    
+Datatype: xsd:float
+
+    
+Datatype: xsd:int
+
+    
+ObjectProperty: SustainTheStrain:Beat
+
+    Domain: 
+        SustainTheStrain:Entity
+    
+    Range: 
+        SustainTheStrain:Entity
+    
+    
+ObjectProperty: SustainTheStrain:BelongsTeam
+
+    Domain: 
+        SustainTheStrain:Entity
+    
+    Range: 
+        SustainTheStrain:Team
+    
+    
+ObjectProperty: SustainTheStrain:Generates
+
+    Domain: 
+        SustainTheStrain:Building
+    
+    Range: 
+        SustainTheStrain:Currency
+    
+    
+ObjectProperty: SustainTheStrain:ToolOf
+
+    Domain: 
+        SustainTheStrain:CreationTool
+    
+    Range: 
+        SustainTheStrain:Department
+    
+    
+ObjectProperty: SustainTheStrain:Uses
+
+    Domain: 
+        SustainTheStrain:Entity
+    
+    Range: 
+        SustainTheStrain:Currency
+    
+    
+ObjectProperty: SustainTheStrain:WorksOver
+
+    Domain: 
+        SustainTheStrain:Worker
+    
+    Range: 
+        owl:Thing
+    
+    
+DataProperty: SustainTheStrain:AttackRadius
+
+    Domain: 
+        SustainTheStrain:Entity
+    
+    Range: 
+        xsd:int
+    
+    
+DataProperty: SustainTheStrain:BuildCost
+
+    Domain: 
+        SustainTheStrain:Building
+    
+    Range: 
+        xsd:int
+    
+    
+DataProperty: SustainTheStrain:BuyCost
+
+    Domain: 
+        SustainTheStrain:CreationTool
+    
+    Range: 
+        xsd:int
+    
+    
+DataProperty: SustainTheStrain:Damage
+
+    Domain: 
+        SustainTheStrain:Entity
+    
+    Range: 
+        xsd:int
+    
+    
+DataProperty: SustainTheStrain:Duration
+
+    Domain: 
+        SustainTheStrain:Effect
+    
+    Range: 
+        xsd:float
+    
+    
+DataProperty: SustainTheStrain:Health
+
+    Domain: 
+        SustainTheStrain:Robot
+    
+    Range: 
+        xsd:int
+    
+    
+DataProperty: SustainTheStrain:ReloadTime
+
+    Domain: 
+        SustainTheStrain:Ability
+    
+    Range: 
+        xsd:float
+    
+    
+DataProperty: SustainTheStrain:Speed
+
+    Domain: 
+        SustainTheStrain:Robot
+    
+    Range: 
+        xsd:int
+    
+    
+DataProperty: SustainTheStrain:UseCost
+
+    Domain: 
+        SustainTheStrain:Ability
+    
+    Range: 
+        xsd:int
+    
+    
+DataProperty: SustainTheStrain:health
+
+    Domain: 
+        SustainTheStrain:Building
+    
+    Range: 
+        xsd:int
+    
+    
+Class: SustainTheStrain:Ability
+
+    SubClassOf: 
+        SustainTheStrain:Entity
+    
+    
+Class: SustainTheStrain:Building
+
+    SubClassOf: 
+        SustainTheStrain:CoreMechanic
+    
+    
+Class: SustainTheStrain:Character
+
+    SubClassOf: 
+        SustainTheStrain:Setting
+    
+    
+Class: SustainTheStrain:Control
+
+    SubClassOf: 
+        SustainTheStrain:GameDesign
+    
+    
+Class: SustainTheStrain:Controller
+
+    SubClassOf: 
+        SustainTheStrain:Control
+    
+    
+Class: SustainTheStrain:CoreMechanic
+
+    SubClassOf: 
+        SustainTheStrain:Mechanic
+    
+    
+Class: SustainTheStrain:CreationTool
+
+    SubClassOf: 
+        SustainTheStrain:Technic
+    
+    
+Class: SustainTheStrain:Currency
+
+    SubClassOf: 
+        SustainTheStrain:CoreMechanic
+    
+    
+Class: SustainTheStrain:Department
+
+    SubClassOf: 
+        SustainTheStrain:Technic
+    
+    
+Class: SustainTheStrain:DocumentCreationTool
+
+    SubClassOf: 
+        SustainTheStrain:CreationTool
+    
+    
+Class: SustainTheStrain:Effect
+
+    SubClassOf: 
+        SustainTheStrain:Visual
+    
+    
+Class: SustainTheStrain:Energy
+
+    SubClassOf: 
+        SustainTheStrain:Currency
+    
+    
+Class: SustainTheStrain:Entity
+
+    SubClassOf: 
+        SustainTheStrain:CoreMechanic
+    
+    
+Class: SustainTheStrain:Environment
+
+    SubClassOf: 
+        SustainTheStrain:World
+    
+    
+Class: SustainTheStrain:GameDesign
+
+    
+Class: SustainTheStrain:GameEngine
+
+    SubClassOf: 
+        SustainTheStrain:CreationTool
+    
+    
+Class: SustainTheStrain:GameplayElement
+
+    SubClassOf: 
+        SustainTheStrain:Environment
+    
+    
+Class: SustainTheStrain:Genre
+
+    SubClassOf: 
+        SustainTheStrain:GameDesign
+    
+    
+Class: SustainTheStrain:Mechanic
+
+    SubClassOf: 
+        SustainTheStrain:GameDesign
+    
+    
+Class: SustainTheStrain:Model
+
+    SubClassOf: 
+        SustainTheStrain:Visual
+    
+    
+Class: SustainTheStrain:Money
+
+    SubClassOf: 
+        SustainTheStrain:Currency
+    
+    
+Class: SustainTheStrain:Name
+
+    SubClassOf: 
+        SustainTheStrain:GameDesign
+    
+    
+Class: SustainTheStrain:NarrativeElement
+
+    SubClassOf: 
+        SustainTheStrain:Environment
+    
+    
+Class: SustainTheStrain:POV
+
+    SubClassOf: 
+        SustainTheStrain:GameDesign
+    
+    
+Class: SustainTheStrain:PlaceOfAction
+
+    SubClassOf: 
+        SustainTheStrain:World
+    
+    
+Class: SustainTheStrain:Platform
+
+    SubClassOf: 
+        SustainTheStrain:Technic
+    
+    
+Class: SustainTheStrain:Robot
+
+    SubClassOf: 
+        SustainTheStrain:Entity
+    
+    
+Class: SustainTheStrain:Setting
+
+    SubClassOf: 
+        SustainTheStrain:GameDesign
+    
+    
+Class: SustainTheStrain:Story
+
+    SubClassOf: 
+        SustainTheStrain:Setting
+    
+    
+Class: SustainTheStrain:Style
+
+    SubClassOf: 
+        SustainTheStrain:Visual
+    
+    
+Class: SustainTheStrain:SubMechanic
+
+    SubClassOf: 
+        SustainTheStrain:Mechanic
+    
+    
+Class: SustainTheStrain:Team
+
+    SubClassOf: 
+        SustainTheStrain:SubMechanic
+    
+    
+Class: SustainTheStrain:Technic
+
+    
+Class: SustainTheStrain:Turret
+
+    SubClassOf: 
+        SustainTheStrain:Building,
+        SustainTheStrain:Entity
+    
+    
+Class: SustainTheStrain:Visual
+
+    
+Class: SustainTheStrain:VisualCreationTool
+
+    SubClassOf: 
+        SustainTheStrain:CreationTool
+    
+    
+Class: SustainTheStrain:Worker
+
+    SubClassOf: 
+        SustainTheStrain:Department
+    
+    
+Class: SustainTheStrain:World
+
+    SubClassOf: 
+        SustainTheStrain:Setting
+    
+    
+Class: owl:Thing
+
+    
+Individual: <http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#3DSMax>
+
+    Types: 
+        SustainTheStrain:VisualCreationTool
+    
+    Facts:  
+     SustainTheStrain:ToolOf  SustainTheStrain:Visual_3D_Department,
+     SustainTheStrain:BuyCost  235
+    
+    
+Individual: SustainTheStrain:Barrack
+
+    Types: 
+        SustainTheStrain:Building,
+        SustainTheStrain:GameplayElement,
+        SustainTheStrain:Uses some SustainTheStrain:Money
+    
+    Facts:  
+     SustainTheStrain:BelongsTeam  SustainTheStrain:Player,
+     SustainTheStrain:Generates  SustainTheStrain:Main_Robot,
+     SustainTheStrain:BuildCost  500
+    
+    
+Individual: SustainTheStrain:Blender
+
+    Types: 
+        SustainTheStrain:VisualCreationTool
+    
+    Facts:  
+     SustainTheStrain:ToolOf  SustainTheStrain:Visual_3D_Department,
+     SustainTheStrain:BuyCost  0
+    
+    
+Individual: SustainTheStrain:Blow
+
+    Types: 
+        SustainTheStrain:Effect
+    
+    Facts:  
+     SustainTheStrain:Duration  2.0f
+    
+    
+Individual: SustainTheStrain:Bridge
+
+    Types: 
+        SustainTheStrain:GameplayElement
+    
+    
+Individual: SustainTheStrain:Building_Robots_Revolution
+
+    Types: 
+        SustainTheStrain:Story
+    
+    
+Individual: SustainTheStrain:Citadel
+
+    Types: 
+        SustainTheStrain:Building,
+        SustainTheStrain:GameplayElement
+    
+    Facts:  
+     SustainTheStrain:BelongsTeam  SustainTheStrain:Player,
+     SustainTheStrain:health  200
+    
+    
+Individual: SustainTheStrain:Construction
+
+    Types: 
+        SustainTheStrain:PlaceOfAction,
+        SustainTheStrain:Style
+    
+    
+Individual: SustainTheStrain:Destruction
+
+    Types: 
+        SustainTheStrain:Effect
+    
+    Facts:  
+     SustainTheStrain:Duration  10.0f
+    
+    
+Individual: SustainTheStrain:Enemy
+
+    Types: 
+        SustainTheStrain:Team
+    
+    
+Individual: SustainTheStrain:Explosion
+
+    Types: 
+        SustainTheStrain:Ability,
+        SustainTheStrain:Uses some SustainTheStrain:Energy
+    
+    Facts:  
+     SustainTheStrain:BelongsTeam  SustainTheStrain:Player,
+     SustainTheStrain:AttackRadius  10,
+     SustainTheStrain:Damage  30,
+     SustainTheStrain:ReloadTime  10.0f
+    
+    
+Individual: SustainTheStrain:Fast_Robot
+
+    Types: 
+        SustainTheStrain:Robot
+    
+    Facts:  
+     SustainTheStrain:BelongsTeam  SustainTheStrain:Enemy,
+     SustainTheStrain:AttackRadius  5,
+     SustainTheStrain:Damage  15,
+     SustainTheStrain:Health  35,
+     SustainTheStrain:Speed  10
+    
+    
+Individual: SustainTheStrain:Figthing
+
+    Types: 
+        SustainTheStrain:SubMechanic
+    
+    
+Individual: SustainTheStrain:Freeze
+
+    Types: 
+        SustainTheStrain:Ability,
+        SustainTheStrain:Uses some SustainTheStrain:Energy
+    
+    Facts:  
+     SustainTheStrain:BelongsTeam  SustainTheStrain:Player,
+     SustainTheStrain:AttackRadius  15,
+     SustainTheStrain:Duration  3.0f,
+     SustainTheStrain:ReloadTime  15.0f
+    
+    
+Individual: SustainTheStrain:Gamedesign_department
+
+    Types: 
+        SustainTheStrain:Department
+    
+    
+Individual: SustainTheStrain:Isometry
+
+    Types: 
+        SustainTheStrain:POV
+    
+    
+Individual: SustainTheStrain:Landing_Robot
+
+    Types: 
+        SustainTheStrain:Ability,
+        SustainTheStrain:Robot,
+        SustainTheStrain:Beat some SustainTheStrain:Robot
+    
+    Facts:  
+     SustainTheStrain:BelongsTeam  SustainTheStrain:Player,
+     SustainTheStrain:AttackRadius  6,
+     SustainTheStrain:Damage  35,
+     SustainTheStrain:Health  40,
+     SustainTheStrain:Speed  5
+    
+    
+Individual: SustainTheStrain:Laser
+
+    Types: 
+        SustainTheStrain:Effect
+    
+    Facts:  
+     SustainTheStrain:Duration  0.5f
+    
+    
+Individual: SustainTheStrain:Laser_Turret
+
+    Types: 
+        SustainTheStrain:Turret,
+        SustainTheStrain:Beat some SustainTheStrain:Robot,
+        SustainTheStrain:Uses some SustainTheStrain:Money
+    
+    Facts:  
+     SustainTheStrain:BelongsTeam  SustainTheStrain:Player,
+     SustainTheStrain:AttackRadius  10,
+     SustainTheStrain:BuildCost  600,
+     SustainTheStrain:Damage  40
+    
+    
+Individual: SustainTheStrain:Main_Robot
+
+    Types: 
+        SustainTheStrain:Robot,
+        SustainTheStrain:Beat some SustainTheStrain:Robot
+    
+    Facts:  
+     SustainTheStrain:BelongsTeam  SustainTheStrain:Player,
+     SustainTheStrain:AttackRadius  8,
+     SustainTheStrain:Damage  25,
+     SustainTheStrain:Health  70,
+     SustainTheStrain:Speed  3
+    
+    
+Individual: SustainTheStrain:Mine
+
+    Types: 
+        SustainTheStrain:SubMechanic,
+        SustainTheStrain:Generates some SustainTheStrain:Money
+    
+    Facts:  
+     SustainTheStrain:BelongsTeam  SustainTheStrain:Player
+    
+    
+Individual: SustainTheStrain:Mouse_and_Keyboard
+
+    Types: 
+        SustainTheStrain:Controller
+    
+    
+Individual: SustainTheStrain:Notion
+
+    Types: 
+        SustainTheStrain:DocumentCreationTool
+    
+    Facts:  
+     SustainTheStrain:ToolOf  SustainTheStrain:Gamedesign_department,
+     SustainTheStrain:BuyCost  0
+    
+    
+Individual: SustainTheStrain:PC
+
+    Types: 
+        SustainTheStrain:Platform
+    
+    
+Individual: SustainTheStrain:Photoshop
+
+    Types: 
+        SustainTheStrain:VisualCreationTool
+    
+    Facts:  
+     SustainTheStrain:ToolOf  SustainTheStrain:Visual_2D_Department,
+     SustainTheStrain:BuyCost  23
+    
+    
+Individual: SustainTheStrain:Place_of_building
+
+    Types: 
+        SustainTheStrain:Building
+    
+    Facts:  
+     SustainTheStrain:BelongsTeam  SustainTheStrain:Player
+    
+    
+Individual: SustainTheStrain:Player
+
+    Types: 
+        SustainTheStrain:Team
+    
+    
+Individual: SustainTheStrain:Power_Station
+
+    Types: 
+        SustainTheStrain:Building,
+        SustainTheStrain:Generates some SustainTheStrain:Energy
+    
+    Facts:  
+     SustainTheStrain:BuildCost  300
+    
+    
+Individual: SustainTheStrain:Pramchuk_Daniil
+
+    Types: 
+        SustainTheStrain:Worker,
+        SustainTheStrain:WorksOver some SustainTheStrain:GameDesign,
+        SustainTheStrain:WorksOver some SustainTheStrain:Technic,
+        SustainTheStrain:WorksOver some SustainTheStrain:Visual
+    
+    
+Individual: SustainTheStrain:Realism
+
+    Types: 
+        SustainTheStrain:Style
+    
+    
+Individual: SustainTheStrain:Rocket
+
+    Types: 
+        SustainTheStrain:Effect
+    
+    Facts:  
+     SustainTheStrain:Duration  5.0f
+    
+    
+Individual: SustainTheStrain:Rocket_Turret
+
+    Types: 
+        SustainTheStrain:Turret,
+        SustainTheStrain:Beat some SustainTheStrain:Robot,
+        SustainTheStrain:Uses some SustainTheStrain:Money
+    
+    Facts:  
+     SustainTheStrain:BelongsTeam  SustainTheStrain:Player,
+     SustainTheStrain:AttackRadius  15,
+     SustainTheStrain:BuildCost  600,
+     SustainTheStrain:Damage  20
+    
+    
+Individual: SustainTheStrain:Shoot
+
+    Types: 
+        SustainTheStrain:Effect
+    
+    Facts:  
+     SustainTheStrain:Duration  0.15f
+    
+    
+Individual: SustainTheStrain:Shooting
+
+    Types: 
+        SustainTheStrain:CoreMechanic
+    
+    
+Individual: SustainTheStrain:Sustain_The_Strain
+
+    Types: 
+        SustainTheStrain:Name
+    
+    
+Individual: SustainTheStrain:Tank_Robot
+
+    Types: 
+        SustainTheStrain:Robot
+    
+    Facts:  
+     SustainTheStrain:BelongsTeam  SustainTheStrain:Enemy,
+     SustainTheStrain:AttackRadius  2,
+     SustainTheStrain:Damage  45,
+     SustainTheStrain:Health  90,
+     SustainTheStrain:Speed  4
+    
+    
+Individual: SustainTheStrain:Tower_Defence
+
+    Types: 
+        SustainTheStrain:Genre
+    
+    
+Individual: SustainTheStrain:Traveling
+
+    Types: 
+        SustainTheStrain:SubMechanic
+    
+    
+Individual: SustainTheStrain:Unity
+
+    Types: 
+        SustainTheStrain:GameEngine
+    
+    Facts:  
+     SustainTheStrain:ToolOf  SustainTheStrain:Unity_Development_Department,
+     SustainTheStrain:BuyCost  0
+    
+    
+Individual: SustainTheStrain:Unity_Development_Department
+
+    Types: 
+        SustainTheStrain:Department
+    
+    
+Individual: SustainTheStrain:Visual_2D_Department
+
+    Types: 
+        SustainTheStrain:Department
+    
+    
+Individual: SustainTheStrain:Visual_3D_Department
+
+    Types: 
+        SustainTheStrain:Department
+    
+    

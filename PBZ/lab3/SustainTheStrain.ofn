@@ -1,0 +1,595 @@
+Prefix(:=<http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(SustainTheStrain:=<http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#>)
+
+
+Ontology(<http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain>
+
+Declaration(Class(SustainTheStrain:Ability))
+Declaration(Class(SustainTheStrain:Building))
+Declaration(Class(SustainTheStrain:Character))
+Declaration(Class(SustainTheStrain:Control))
+Declaration(Class(SustainTheStrain:Controller))
+Declaration(Class(SustainTheStrain:CoreMechanic))
+Declaration(Class(SustainTheStrain:CreationTool))
+Declaration(Class(SustainTheStrain:Currency))
+Declaration(Class(SustainTheStrain:Department))
+Declaration(Class(SustainTheStrain:DocumentCreationTool))
+Declaration(Class(SustainTheStrain:Effect))
+Declaration(Class(SustainTheStrain:Energy))
+Declaration(Class(SustainTheStrain:Entity))
+Declaration(Class(SustainTheStrain:Environment))
+Declaration(Class(SustainTheStrain:GameDesign))
+Declaration(Class(SustainTheStrain:GameEngine))
+Declaration(Class(SustainTheStrain:GameplayElement))
+Declaration(Class(SustainTheStrain:Genre))
+Declaration(Class(SustainTheStrain:Mechanic))
+Declaration(Class(SustainTheStrain:Model))
+Declaration(Class(SustainTheStrain:Money))
+Declaration(Class(SustainTheStrain:Name))
+Declaration(Class(SustainTheStrain:NarrativeElement))
+Declaration(Class(SustainTheStrain:POV))
+Declaration(Class(SustainTheStrain:PlaceOfAction))
+Declaration(Class(SustainTheStrain:Platform))
+Declaration(Class(SustainTheStrain:Robot))
+Declaration(Class(SustainTheStrain:Setting))
+Declaration(Class(SustainTheStrain:Story))
+Declaration(Class(SustainTheStrain:Style))
+Declaration(Class(SustainTheStrain:SubMechanic))
+Declaration(Class(SustainTheStrain:Team))
+Declaration(Class(SustainTheStrain:Technic))
+Declaration(Class(SustainTheStrain:Turret))
+Declaration(Class(SustainTheStrain:Visual))
+Declaration(Class(SustainTheStrain:VisualCreationTool))
+Declaration(Class(SustainTheStrain:Worker))
+Declaration(Class(SustainTheStrain:World))
+Declaration(ObjectProperty(SustainTheStrain:Beat))
+Declaration(ObjectProperty(SustainTheStrain:BelongsTeam))
+Declaration(ObjectProperty(SustainTheStrain:Generates))
+Declaration(ObjectProperty(SustainTheStrain:ToolOf))
+Declaration(ObjectProperty(SustainTheStrain:Uses))
+Declaration(ObjectProperty(SustainTheStrain:WorksOver))
+Declaration(DataProperty(SustainTheStrain:AttackRadius))
+Declaration(DataProperty(SustainTheStrain:BuildCost))
+Declaration(DataProperty(SustainTheStrain:BuyCost))
+Declaration(DataProperty(SustainTheStrain:Damage))
+Declaration(DataProperty(SustainTheStrain:Duration))
+Declaration(DataProperty(SustainTheStrain:Health))
+Declaration(DataProperty(SustainTheStrain:ReloadTime))
+Declaration(DataProperty(SustainTheStrain:Speed))
+Declaration(DataProperty(SustainTheStrain:UseCost))
+Declaration(DataProperty(SustainTheStrain:health))
+Declaration(NamedIndividual(SustainTheStrain:Barrack))
+Declaration(NamedIndividual(SustainTheStrain:Blender))
+Declaration(NamedIndividual(SustainTheStrain:Blow))
+Declaration(NamedIndividual(SustainTheStrain:Bridge))
+Declaration(NamedIndividual(SustainTheStrain:Building_Robots_Revolution))
+Declaration(NamedIndividual(SustainTheStrain:Citadel))
+Declaration(NamedIndividual(SustainTheStrain:Construction))
+Declaration(NamedIndividual(SustainTheStrain:Destruction))
+Declaration(NamedIndividual(SustainTheStrain:Enemy))
+Declaration(NamedIndividual(SustainTheStrain:Explosion))
+Declaration(NamedIndividual(SustainTheStrain:Fast_Robot))
+Declaration(NamedIndividual(SustainTheStrain:Figthing))
+Declaration(NamedIndividual(SustainTheStrain:Freeze))
+Declaration(NamedIndividual(SustainTheStrain:Gamedesign_department))
+Declaration(NamedIndividual(SustainTheStrain:Isometry))
+Declaration(NamedIndividual(SustainTheStrain:Landing_Robot))
+Declaration(NamedIndividual(SustainTheStrain:Laser))
+Declaration(NamedIndividual(SustainTheStrain:Laser_Turret))
+Declaration(NamedIndividual(SustainTheStrain:Main_Robot))
+Declaration(NamedIndividual(SustainTheStrain:Mine))
+Declaration(NamedIndividual(SustainTheStrain:Mouse_and_Keyboard))
+Declaration(NamedIndividual(SustainTheStrain:Notion))
+Declaration(NamedIndividual(SustainTheStrain:PC))
+Declaration(NamedIndividual(SustainTheStrain:Photoshop))
+Declaration(NamedIndividual(SustainTheStrain:Place_of_building))
+Declaration(NamedIndividual(SustainTheStrain:Player))
+Declaration(NamedIndividual(SustainTheStrain:Power_Station))
+Declaration(NamedIndividual(SustainTheStrain:Pramchuk_Daniil))
+Declaration(NamedIndividual(SustainTheStrain:Realism))
+Declaration(NamedIndividual(SustainTheStrain:Rocket))
+Declaration(NamedIndividual(SustainTheStrain:Rocket_Turret))
+Declaration(NamedIndividual(SustainTheStrain:Shoot))
+Declaration(NamedIndividual(SustainTheStrain:Shooting))
+Declaration(NamedIndividual(SustainTheStrain:Sustain_The_Strain))
+Declaration(NamedIndividual(SustainTheStrain:Tank_Robot))
+Declaration(NamedIndividual(SustainTheStrain:Tower_Defence))
+Declaration(NamedIndividual(SustainTheStrain:Traveling))
+Declaration(NamedIndividual(SustainTheStrain:Unity))
+Declaration(NamedIndividual(SustainTheStrain:Unity_Development_Department))
+Declaration(NamedIndividual(SustainTheStrain:Visual_2D_Department))
+Declaration(NamedIndividual(SustainTheStrain:Visual_3D_Department))
+Declaration(NamedIndividual(<http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#3DSMax>))
+############################
+#   Object Properties
+############################
+
+# Object Property: SustainTheStrain:Beat (SustainTheStrain:Beat)
+
+ObjectPropertyDomain(SustainTheStrain:Beat SustainTheStrain:Entity)
+ObjectPropertyRange(SustainTheStrain:Beat SustainTheStrain:Entity)
+
+# Object Property: SustainTheStrain:BelongsTeam (SustainTheStrain:BelongsTeam)
+
+ObjectPropertyDomain(SustainTheStrain:BelongsTeam SustainTheStrain:Entity)
+ObjectPropertyRange(SustainTheStrain:BelongsTeam SustainTheStrain:Team)
+
+# Object Property: SustainTheStrain:Generates (SustainTheStrain:Generates)
+
+ObjectPropertyDomain(SustainTheStrain:Generates SustainTheStrain:Building)
+ObjectPropertyRange(SustainTheStrain:Generates SustainTheStrain:Currency)
+
+# Object Property: SustainTheStrain:ToolOf (SustainTheStrain:ToolOf)
+
+ObjectPropertyDomain(SustainTheStrain:ToolOf SustainTheStrain:CreationTool)
+ObjectPropertyRange(SustainTheStrain:ToolOf SustainTheStrain:Department)
+
+# Object Property: SustainTheStrain:Uses (SustainTheStrain:Uses)
+
+ObjectPropertyDomain(SustainTheStrain:Uses SustainTheStrain:Entity)
+ObjectPropertyRange(SustainTheStrain:Uses SustainTheStrain:Currency)
+
+# Object Property: SustainTheStrain:WorksOver (SustainTheStrain:WorksOver)
+
+ObjectPropertyDomain(SustainTheStrain:WorksOver SustainTheStrain:Worker)
+ObjectPropertyRange(SustainTheStrain:WorksOver owl:Thing)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: SustainTheStrain:AttackRadius (SustainTheStrain:AttackRadius)
+
+DataPropertyDomain(SustainTheStrain:AttackRadius SustainTheStrain:Entity)
+DataPropertyRange(SustainTheStrain:AttackRadius xsd:int)
+
+# Data Property: SustainTheStrain:BuildCost (SustainTheStrain:BuildCost)
+
+DataPropertyDomain(SustainTheStrain:BuildCost SustainTheStrain:Building)
+DataPropertyRange(SustainTheStrain:BuildCost xsd:int)
+
+# Data Property: SustainTheStrain:BuyCost (SustainTheStrain:BuyCost)
+
+DataPropertyDomain(SustainTheStrain:BuyCost SustainTheStrain:CreationTool)
+DataPropertyRange(SustainTheStrain:BuyCost xsd:int)
+
+# Data Property: SustainTheStrain:Damage (SustainTheStrain:Damage)
+
+DataPropertyDomain(SustainTheStrain:Damage SustainTheStrain:Entity)
+DataPropertyRange(SustainTheStrain:Damage xsd:int)
+
+# Data Property: SustainTheStrain:Duration (SustainTheStrain:Duration)
+
+DataPropertyDomain(SustainTheStrain:Duration SustainTheStrain:Effect)
+DataPropertyRange(SustainTheStrain:Duration xsd:float)
+
+# Data Property: SustainTheStrain:Health (SustainTheStrain:Health)
+
+DataPropertyDomain(SustainTheStrain:Health SustainTheStrain:Robot)
+DataPropertyRange(SustainTheStrain:Health xsd:int)
+
+# Data Property: SustainTheStrain:ReloadTime (SustainTheStrain:ReloadTime)
+
+DataPropertyDomain(SustainTheStrain:ReloadTime SustainTheStrain:Ability)
+DataPropertyRange(SustainTheStrain:ReloadTime xsd:float)
+
+# Data Property: SustainTheStrain:Speed (SustainTheStrain:Speed)
+
+DataPropertyDomain(SustainTheStrain:Speed SustainTheStrain:Robot)
+DataPropertyRange(SustainTheStrain:Speed xsd:int)
+
+# Data Property: SustainTheStrain:UseCost (SustainTheStrain:UseCost)
+
+DataPropertyDomain(SustainTheStrain:UseCost SustainTheStrain:Ability)
+DataPropertyRange(SustainTheStrain:UseCost xsd:int)
+
+# Data Property: SustainTheStrain:health (SustainTheStrain:health)
+
+DataPropertyDomain(SustainTheStrain:health SustainTheStrain:Building)
+DataPropertyRange(SustainTheStrain:health xsd:int)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: SustainTheStrain:Ability (SustainTheStrain:Ability)
+
+SubClassOf(SustainTheStrain:Ability SustainTheStrain:Entity)
+
+# Class: SustainTheStrain:Building (SustainTheStrain:Building)
+
+SubClassOf(SustainTheStrain:Building SustainTheStrain:CoreMechanic)
+
+# Class: SustainTheStrain:Character (SustainTheStrain:Character)
+
+SubClassOf(SustainTheStrain:Character SustainTheStrain:Setting)
+
+# Class: SustainTheStrain:Control (SustainTheStrain:Control)
+
+SubClassOf(SustainTheStrain:Control SustainTheStrain:GameDesign)
+
+# Class: SustainTheStrain:Controller (SustainTheStrain:Controller)
+
+SubClassOf(SustainTheStrain:Controller SustainTheStrain:Control)
+
+# Class: SustainTheStrain:CoreMechanic (SustainTheStrain:CoreMechanic)
+
+SubClassOf(SustainTheStrain:CoreMechanic SustainTheStrain:Mechanic)
+
+# Class: SustainTheStrain:CreationTool (SustainTheStrain:CreationTool)
+
+SubClassOf(SustainTheStrain:CreationTool SustainTheStrain:Technic)
+
+# Class: SustainTheStrain:Currency (SustainTheStrain:Currency)
+
+SubClassOf(SustainTheStrain:Currency SustainTheStrain:CoreMechanic)
+
+# Class: SustainTheStrain:Department (SustainTheStrain:Department)
+
+SubClassOf(SustainTheStrain:Department SustainTheStrain:Technic)
+
+# Class: SustainTheStrain:DocumentCreationTool (SustainTheStrain:DocumentCreationTool)
+
+SubClassOf(SustainTheStrain:DocumentCreationTool SustainTheStrain:CreationTool)
+
+# Class: SustainTheStrain:Effect (SustainTheStrain:Effect)
+
+SubClassOf(SustainTheStrain:Effect SustainTheStrain:Visual)
+
+# Class: SustainTheStrain:Energy (SustainTheStrain:Energy)
+
+SubClassOf(SustainTheStrain:Energy SustainTheStrain:Currency)
+
+# Class: SustainTheStrain:Entity (SustainTheStrain:Entity)
+
+SubClassOf(SustainTheStrain:Entity SustainTheStrain:CoreMechanic)
+
+# Class: SustainTheStrain:Environment (SustainTheStrain:Environment)
+
+SubClassOf(SustainTheStrain:Environment SustainTheStrain:World)
+
+# Class: SustainTheStrain:GameEngine (SustainTheStrain:GameEngine)
+
+SubClassOf(SustainTheStrain:GameEngine SustainTheStrain:CreationTool)
+
+# Class: SustainTheStrain:GameplayElement (SustainTheStrain:GameplayElement)
+
+SubClassOf(SustainTheStrain:GameplayElement SustainTheStrain:Environment)
+
+# Class: SustainTheStrain:Genre (SustainTheStrain:Genre)
+
+SubClassOf(SustainTheStrain:Genre SustainTheStrain:GameDesign)
+
+# Class: SustainTheStrain:Mechanic (SustainTheStrain:Mechanic)
+
+SubClassOf(SustainTheStrain:Mechanic SustainTheStrain:GameDesign)
+
+# Class: SustainTheStrain:Model (SustainTheStrain:Model)
+
+SubClassOf(SustainTheStrain:Model SustainTheStrain:Visual)
+
+# Class: SustainTheStrain:Money (SustainTheStrain:Money)
+
+SubClassOf(SustainTheStrain:Money SustainTheStrain:Currency)
+
+# Class: SustainTheStrain:Name (SustainTheStrain:Name)
+
+SubClassOf(SustainTheStrain:Name SustainTheStrain:GameDesign)
+
+# Class: SustainTheStrain:NarrativeElement (SustainTheStrain:NarrativeElement)
+
+SubClassOf(SustainTheStrain:NarrativeElement SustainTheStrain:Environment)
+
+# Class: SustainTheStrain:POV (SustainTheStrain:POV)
+
+SubClassOf(SustainTheStrain:POV SustainTheStrain:GameDesign)
+
+# Class: SustainTheStrain:PlaceOfAction (SustainTheStrain:PlaceOfAction)
+
+SubClassOf(SustainTheStrain:PlaceOfAction SustainTheStrain:World)
+
+# Class: SustainTheStrain:Platform (SustainTheStrain:Platform)
+
+SubClassOf(SustainTheStrain:Platform SustainTheStrain:Technic)
+
+# Class: SustainTheStrain:Robot (SustainTheStrain:Robot)
+
+SubClassOf(SustainTheStrain:Robot SustainTheStrain:Entity)
+
+# Class: SustainTheStrain:Setting (SustainTheStrain:Setting)
+
+SubClassOf(SustainTheStrain:Setting SustainTheStrain:GameDesign)
+
+# Class: SustainTheStrain:Story (SustainTheStrain:Story)
+
+SubClassOf(SustainTheStrain:Story SustainTheStrain:Setting)
+
+# Class: SustainTheStrain:Style (SustainTheStrain:Style)
+
+SubClassOf(SustainTheStrain:Style SustainTheStrain:Visual)
+
+# Class: SustainTheStrain:SubMechanic (SustainTheStrain:SubMechanic)
+
+SubClassOf(SustainTheStrain:SubMechanic SustainTheStrain:Mechanic)
+
+# Class: SustainTheStrain:Team (SustainTheStrain:Team)
+
+SubClassOf(SustainTheStrain:Team SustainTheStrain:SubMechanic)
+
+# Class: SustainTheStrain:Turret (SustainTheStrain:Turret)
+
+SubClassOf(SustainTheStrain:Turret SustainTheStrain:Building)
+SubClassOf(SustainTheStrain:Turret SustainTheStrain:Entity)
+
+# Class: SustainTheStrain:VisualCreationTool (SustainTheStrain:VisualCreationTool)
+
+SubClassOf(SustainTheStrain:VisualCreationTool SustainTheStrain:CreationTool)
+
+# Class: SustainTheStrain:Worker (SustainTheStrain:Worker)
+
+SubClassOf(SustainTheStrain:Worker SustainTheStrain:Department)
+
+# Class: SustainTheStrain:World (SustainTheStrain:World)
+
+SubClassOf(SustainTheStrain:World SustainTheStrain:Setting)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: SustainTheStrain:Barrack (SustainTheStrain:Barrack)
+
+ClassAssertion(SustainTheStrain:Building SustainTheStrain:Barrack)
+ClassAssertion(SustainTheStrain:GameplayElement SustainTheStrain:Barrack)
+ClassAssertion(ObjectSomeValuesFrom(SustainTheStrain:Uses SustainTheStrain:Money) SustainTheStrain:Barrack)
+ObjectPropertyAssertion(SustainTheStrain:BelongsTeam SustainTheStrain:Barrack SustainTheStrain:Player)
+ObjectPropertyAssertion(SustainTheStrain:Generates SustainTheStrain:Barrack SustainTheStrain:Main_Robot)
+DataPropertyAssertion(SustainTheStrain:BuildCost SustainTheStrain:Barrack "500"^^xsd:decimal)
+
+# Individual: SustainTheStrain:Blender (SustainTheStrain:Blender)
+
+ClassAssertion(SustainTheStrain:VisualCreationTool SustainTheStrain:Blender)
+ObjectPropertyAssertion(SustainTheStrain:ToolOf SustainTheStrain:Blender SustainTheStrain:Visual_3D_Department)
+DataPropertyAssertion(SustainTheStrain:BuyCost SustainTheStrain:Blender "0"^^xsd:decimal)
+
+# Individual: SustainTheStrain:Blow (SustainTheStrain:Blow)
+
+ClassAssertion(SustainTheStrain:Effect SustainTheStrain:Blow)
+DataPropertyAssertion(SustainTheStrain:Duration SustainTheStrain:Blow "2.0"^^xsd:float)
+
+# Individual: SustainTheStrain:Bridge (SustainTheStrain:Bridge)
+
+ClassAssertion(SustainTheStrain:GameplayElement SustainTheStrain:Bridge)
+
+# Individual: SustainTheStrain:Building_Robots_Revolution (SustainTheStrain:Building_Robots_Revolution)
+
+ClassAssertion(SustainTheStrain:Story SustainTheStrain:Building_Robots_Revolution)
+
+# Individual: SustainTheStrain:Citadel (SustainTheStrain:Citadel)
+
+ClassAssertion(SustainTheStrain:Building SustainTheStrain:Citadel)
+ClassAssertion(SustainTheStrain:GameplayElement SustainTheStrain:Citadel)
+ObjectPropertyAssertion(SustainTheStrain:BelongsTeam SustainTheStrain:Citadel SustainTheStrain:Player)
+DataPropertyAssertion(SustainTheStrain:health SustainTheStrain:Citadel "200"^^xsd:decimal)
+
+# Individual: SustainTheStrain:Construction (SustainTheStrain:Construction)
+
+ClassAssertion(SustainTheStrain:PlaceOfAction SustainTheStrain:Construction)
+ClassAssertion(SustainTheStrain:Style SustainTheStrain:Construction)
+
+# Individual: SustainTheStrain:Destruction (SustainTheStrain:Destruction)
+
+ClassAssertion(SustainTheStrain:Effect SustainTheStrain:Destruction)
+DataPropertyAssertion(SustainTheStrain:Duration SustainTheStrain:Destruction "10.0"^^xsd:float)
+
+# Individual: SustainTheStrain:Enemy (SustainTheStrain:Enemy)
+
+ClassAssertion(SustainTheStrain:Team SustainTheStrain:Enemy)
+
+# Individual: SustainTheStrain:Explosion (SustainTheStrain:Explosion)
+
+ClassAssertion(SustainTheStrain:Ability SustainTheStrain:Explosion)
+ClassAssertion(ObjectSomeValuesFrom(SustainTheStrain:Uses SustainTheStrain:Energy) SustainTheStrain:Explosion)
+ObjectPropertyAssertion(SustainTheStrain:BelongsTeam SustainTheStrain:Explosion SustainTheStrain:Player)
+DataPropertyAssertion(SustainTheStrain:AttackRadius SustainTheStrain:Explosion "10"^^xsd:decimal)
+DataPropertyAssertion(SustainTheStrain:Damage SustainTheStrain:Explosion "30"^^xsd:decimal)
+DataPropertyAssertion(SustainTheStrain:ReloadTime SustainTheStrain:Explosion "10.0"^^xsd:float)
+
+# Individual: SustainTheStrain:Fast_Robot (SustainTheStrain:Fast_Robot)
+
+ClassAssertion(SustainTheStrain:Robot SustainTheStrain:Fast_Robot)
+ObjectPropertyAssertion(SustainTheStrain:BelongsTeam SustainTheStrain:Fast_Robot SustainTheStrain:Enemy)
+DataPropertyAssertion(SustainTheStrain:AttackRadius SustainTheStrain:Fast_Robot "5"^^xsd:decimal)
+DataPropertyAssertion(SustainTheStrain:Damage SustainTheStrain:Fast_Robot "15"^^xsd:decimal)
+DataPropertyAssertion(SustainTheStrain:Health SustainTheStrain:Fast_Robot "35"^^xsd:decimal)
+DataPropertyAssertion(SustainTheStrain:Speed SustainTheStrain:Fast_Robot "10"^^xsd:decimal)
+
+# Individual: SustainTheStrain:Figthing (SustainTheStrain:Figthing)
+
+ClassAssertion(SustainTheStrain:SubMechanic SustainTheStrain:Figthing)
+
+# Individual: SustainTheStrain:Freeze (SustainTheStrain:Freeze)
+
+ClassAssertion(SustainTheStrain:Ability SustainTheStrain:Freeze)
+ClassAssertion(ObjectSomeValuesFrom(SustainTheStrain:Uses SustainTheStrain:Energy) SustainTheStrain:Freeze)
+ObjectPropertyAssertion(SustainTheStrain:BelongsTeam SustainTheStrain:Freeze SustainTheStrain:Player)
+DataPropertyAssertion(SustainTheStrain:AttackRadius SustainTheStrain:Freeze "15"^^xsd:decimal)
+DataPropertyAssertion(SustainTheStrain:Duration SustainTheStrain:Freeze "3.0"^^xsd:float)
+DataPropertyAssertion(SustainTheStrain:ReloadTime SustainTheStrain:Freeze "15.0"^^xsd:float)
+
+# Individual: SustainTheStrain:Gamedesign_department (SustainTheStrain:Gamedesign_department)
+
+ClassAssertion(SustainTheStrain:Department SustainTheStrain:Gamedesign_department)
+
+# Individual: SustainTheStrain:Isometry (SustainTheStrain:Isometry)
+
+ClassAssertion(SustainTheStrain:POV SustainTheStrain:Isometry)
+
+# Individual: SustainTheStrain:Landing_Robot (SustainTheStrain:Landing_Robot)
+
+ClassAssertion(SustainTheStrain:Ability SustainTheStrain:Landing_Robot)
+ClassAssertion(SustainTheStrain:Robot SustainTheStrain:Landing_Robot)
+ClassAssertion(ObjectSomeValuesFrom(SustainTheStrain:Beat SustainTheStrain:Robot) SustainTheStrain:Landing_Robot)
+ObjectPropertyAssertion(SustainTheStrain:BelongsTeam SustainTheStrain:Landing_Robot SustainTheStrain:Player)
+DataPropertyAssertion(SustainTheStrain:AttackRadius SustainTheStrain:Landing_Robot "6"^^xsd:decimal)
+DataPropertyAssertion(SustainTheStrain:Damage SustainTheStrain:Landing_Robot "35"^^xsd:decimal)
+DataPropertyAssertion(SustainTheStrain:Health SustainTheStrain:Landing_Robot "40"^^xsd:decimal)
+DataPropertyAssertion(SustainTheStrain:Speed SustainTheStrain:Landing_Robot "5"^^xsd:decimal)
+
+# Individual: SustainTheStrain:Laser (SustainTheStrain:Laser)
+
+ClassAssertion(SustainTheStrain:Effect SustainTheStrain:Laser)
+DataPropertyAssertion(SustainTheStrain:Duration SustainTheStrain:Laser "0.5"^^xsd:float)
+
+# Individual: SustainTheStrain:Laser_Turret (SustainTheStrain:Laser_Turret)
+
+ClassAssertion(SustainTheStrain:Turret SustainTheStrain:Laser_Turret)
+ClassAssertion(ObjectSomeValuesFrom(SustainTheStrain:Beat SustainTheStrain:Robot) SustainTheStrain:Laser_Turret)
+ClassAssertion(ObjectSomeValuesFrom(SustainTheStrain:Uses SustainTheStrain:Money) SustainTheStrain:Laser_Turret)
+ObjectPropertyAssertion(SustainTheStrain:BelongsTeam SustainTheStrain:Laser_Turret SustainTheStrain:Player)
+DataPropertyAssertion(SustainTheStrain:AttackRadius SustainTheStrain:Laser_Turret "10"^^xsd:decimal)
+DataPropertyAssertion(SustainTheStrain:BuildCost SustainTheStrain:Laser_Turret "600"^^xsd:decimal)
+DataPropertyAssertion(SustainTheStrain:Damage SustainTheStrain:Laser_Turret "40"^^xsd:decimal)
+
+# Individual: SustainTheStrain:Main_Robot (SustainTheStrain:Main_Robot)
+
+ClassAssertion(SustainTheStrain:Robot SustainTheStrain:Main_Robot)
+ClassAssertion(ObjectSomeValuesFrom(SustainTheStrain:Beat SustainTheStrain:Robot) SustainTheStrain:Main_Robot)
+ObjectPropertyAssertion(SustainTheStrain:BelongsTeam SustainTheStrain:Main_Robot SustainTheStrain:Player)
+DataPropertyAssertion(SustainTheStrain:AttackRadius SustainTheStrain:Main_Robot "8"^^xsd:decimal)
+DataPropertyAssertion(SustainTheStrain:Damage SustainTheStrain:Main_Robot "25"^^xsd:decimal)
+DataPropertyAssertion(SustainTheStrain:Health SustainTheStrain:Main_Robot "70"^^xsd:decimal)
+DataPropertyAssertion(SustainTheStrain:Speed SustainTheStrain:Main_Robot "3"^^xsd:decimal)
+
+# Individual: SustainTheStrain:Mine (SustainTheStrain:Mine)
+
+ClassAssertion(SustainTheStrain:SubMechanic SustainTheStrain:Mine)
+ClassAssertion(ObjectSomeValuesFrom(SustainTheStrain:Generates SustainTheStrain:Money) SustainTheStrain:Mine)
+ObjectPropertyAssertion(SustainTheStrain:BelongsTeam SustainTheStrain:Mine SustainTheStrain:Player)
+
+# Individual: SustainTheStrain:Mouse_and_Keyboard (SustainTheStrain:Mouse_and_Keyboard)
+
+ClassAssertion(SustainTheStrain:Controller SustainTheStrain:Mouse_and_Keyboard)
+
+# Individual: SustainTheStrain:Notion (SustainTheStrain:Notion)
+
+ClassAssertion(SustainTheStrain:DocumentCreationTool SustainTheStrain:Notion)
+ObjectPropertyAssertion(SustainTheStrain:ToolOf SustainTheStrain:Notion SustainTheStrain:Gamedesign_department)
+DataPropertyAssertion(SustainTheStrain:BuyCost SustainTheStrain:Notion "0"^^xsd:decimal)
+
+# Individual: SustainTheStrain:PC (SustainTheStrain:PC)
+
+ClassAssertion(SustainTheStrain:Platform SustainTheStrain:PC)
+
+# Individual: SustainTheStrain:Photoshop (SustainTheStrain:Photoshop)
+
+ClassAssertion(SustainTheStrain:VisualCreationTool SustainTheStrain:Photoshop)
+ObjectPropertyAssertion(SustainTheStrain:ToolOf SustainTheStrain:Photoshop SustainTheStrain:Visual_2D_Department)
+DataPropertyAssertion(SustainTheStrain:BuyCost SustainTheStrain:Photoshop "23"^^xsd:decimal)
+
+# Individual: SustainTheStrain:Place_of_building (SustainTheStrain:Place_of_building)
+
+ClassAssertion(SustainTheStrain:Building SustainTheStrain:Place_of_building)
+ObjectPropertyAssertion(SustainTheStrain:BelongsTeam SustainTheStrain:Place_of_building SustainTheStrain:Player)
+
+# Individual: SustainTheStrain:Player (SustainTheStrain:Player)
+
+ClassAssertion(SustainTheStrain:Team SustainTheStrain:Player)
+
+# Individual: SustainTheStrain:Power_Station (SustainTheStrain:Power_Station)
+
+ClassAssertion(SustainTheStrain:Building SustainTheStrain:Power_Station)
+ClassAssertion(ObjectSomeValuesFrom(SustainTheStrain:Generates SustainTheStrain:Energy) SustainTheStrain:Power_Station)
+DataPropertyAssertion(SustainTheStrain:BuildCost SustainTheStrain:Power_Station "300"^^xsd:decimal)
+
+# Individual: SustainTheStrain:Pramchuk_Daniil (SustainTheStrain:Pramchuk_Daniil)
+
+ClassAssertion(SustainTheStrain:Worker SustainTheStrain:Pramchuk_Daniil)
+ClassAssertion(ObjectSomeValuesFrom(SustainTheStrain:WorksOver SustainTheStrain:GameDesign) SustainTheStrain:Pramchuk_Daniil)
+ClassAssertion(ObjectSomeValuesFrom(SustainTheStrain:WorksOver SustainTheStrain:Technic) SustainTheStrain:Pramchuk_Daniil)
+ClassAssertion(ObjectSomeValuesFrom(SustainTheStrain:WorksOver SustainTheStrain:Visual) SustainTheStrain:Pramchuk_Daniil)
+
+# Individual: SustainTheStrain:Realism (SustainTheStrain:Realism)
+
+ClassAssertion(SustainTheStrain:Style SustainTheStrain:Realism)
+
+# Individual: SustainTheStrain:Rocket (SustainTheStrain:Rocket)
+
+ClassAssertion(SustainTheStrain:Effect SustainTheStrain:Rocket)
+DataPropertyAssertion(SustainTheStrain:Duration SustainTheStrain:Rocket "5.0"^^xsd:float)
+
+# Individual: SustainTheStrain:Rocket_Turret (SustainTheStrain:Rocket_Turret)
+
+ClassAssertion(SustainTheStrain:Turret SustainTheStrain:Rocket_Turret)
+ClassAssertion(ObjectSomeValuesFrom(SustainTheStrain:Beat SustainTheStrain:Robot) SustainTheStrain:Rocket_Turret)
+ClassAssertion(ObjectSomeValuesFrom(SustainTheStrain:Uses SustainTheStrain:Money) SustainTheStrain:Rocket_Turret)
+ObjectPropertyAssertion(SustainTheStrain:BelongsTeam SustainTheStrain:Rocket_Turret SustainTheStrain:Player)
+DataPropertyAssertion(SustainTheStrain:AttackRadius SustainTheStrain:Rocket_Turret "15"^^xsd:decimal)
+DataPropertyAssertion(SustainTheStrain:BuildCost SustainTheStrain:Rocket_Turret "600"^^xsd:decimal)
+DataPropertyAssertion(SustainTheStrain:Damage SustainTheStrain:Rocket_Turret "20"^^xsd:decimal)
+
+# Individual: SustainTheStrain:Shoot (SustainTheStrain:Shoot)
+
+ClassAssertion(SustainTheStrain:Effect SustainTheStrain:Shoot)
+DataPropertyAssertion(SustainTheStrain:Duration SustainTheStrain:Shoot "0.15"^^xsd:float)
+
+# Individual: SustainTheStrain:Shooting (SustainTheStrain:Shooting)
+
+ClassAssertion(SustainTheStrain:CoreMechanic SustainTheStrain:Shooting)
+
+# Individual: SustainTheStrain:Sustain_The_Strain (SustainTheStrain:Sustain_The_Strain)
+
+ClassAssertion(SustainTheStrain:Name SustainTheStrain:Sustain_The_Strain)
+
+# Individual: SustainTheStrain:Tank_Robot (SustainTheStrain:Tank_Robot)
+
+ClassAssertion(SustainTheStrain:Robot SustainTheStrain:Tank_Robot)
+ObjectPropertyAssertion(SustainTheStrain:BelongsTeam SustainTheStrain:Tank_Robot SustainTheStrain:Enemy)
+DataPropertyAssertion(SustainTheStrain:AttackRadius SustainTheStrain:Tank_Robot "2"^^xsd:decimal)
+DataPropertyAssertion(SustainTheStrain:Damage SustainTheStrain:Tank_Robot "45"^^xsd:decimal)
+DataPropertyAssertion(SustainTheStrain:Health SustainTheStrain:Tank_Robot "90"^^xsd:decimal)
+DataPropertyAssertion(SustainTheStrain:Speed SustainTheStrain:Tank_Robot "4"^^xsd:decimal)
+
+# Individual: SustainTheStrain:Tower_Defence (SustainTheStrain:Tower_Defence)
+
+ClassAssertion(SustainTheStrain:Genre SustainTheStrain:Tower_Defence)
+
+# Individual: SustainTheStrain:Traveling (SustainTheStrain:Traveling)
+
+ClassAssertion(SustainTheStrain:SubMechanic SustainTheStrain:Traveling)
+
+# Individual: SustainTheStrain:Unity (SustainTheStrain:Unity)
+
+ClassAssertion(SustainTheStrain:GameEngine SustainTheStrain:Unity)
+ObjectPropertyAssertion(SustainTheStrain:ToolOf SustainTheStrain:Unity SustainTheStrain:Unity_Development_Department)
+DataPropertyAssertion(SustainTheStrain:BuyCost SustainTheStrain:Unity "0"^^xsd:decimal)
+
+# Individual: SustainTheStrain:Unity_Development_Department (SustainTheStrain:Unity_Development_Department)
+
+ClassAssertion(SustainTheStrain:Department SustainTheStrain:Unity_Development_Department)
+
+# Individual: SustainTheStrain:Visual_2D_Department (SustainTheStrain:Visual_2D_Department)
+
+ClassAssertion(SustainTheStrain:Department SustainTheStrain:Visual_2D_Department)
+
+# Individual: SustainTheStrain:Visual_3D_Department (SustainTheStrain:Visual_3D_Department)
+
+ClassAssertion(SustainTheStrain:Department SustainTheStrain:Visual_3D_Department)
+
+# Individual: <http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#3DSMax> (<http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#3DSMax>)
+
+ClassAssertion(SustainTheStrain:VisualCreationTool <http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#3DSMax>)
+ObjectPropertyAssertion(SustainTheStrain:ToolOf <http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#3DSMax> SustainTheStrain:Visual_3D_Department)
+DataPropertyAssertion(SustainTheStrain:BuyCost <http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#3DSMax> "235"^^xsd:decimal)
+
+
+)

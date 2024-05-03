@@ -5,8 +5,7 @@ import spacy
 
 class TextCoprusProcessor:
 
-    def __init__(self, load_existing=False,
-                 processing_view=None) -> None:
+    def __init__(self, load_existing=False, processing_view=None) -> None:
         self._load_existing = load_existing
         self._load_file_name:str
         if not load_existing:
@@ -58,25 +57,19 @@ class TextCoprusProcessor:
         if not self._load_existing:
             self._parse_text_corpus()
             self._result_df.sort_values(by='word', inplace=True)
-            self._result_df.to_csv(os.path.realpath(os.path.join(
-                os.path.dirname(__file__), 'text_corpus_stats/result.csv')), index=False)                
+            self._result_df.to_csv(os.path.realpath(os.path.join(os.path.dirname(__file__), 'text_corpus_stats/result.csv')), index=False)                
     
     def create_all_main_stats(self) -> None:
         if self._result_df.empty:
             self.process_text_corpus()
-        stats_creator = TextCorpusStatsCreator(
-            result_df=self._result_df
-        )
+        stats_creator = TextCorpusStatsCreator(result_df=self._result_df)
         stats_creator.create_all_stats()    
         self._ready_status = True
         if self._processing_view:
             self._processing_view.notify_on_process_status(self.process_status)
 
     def _load_ready(self) -> pd.DataFrame:
-        return pd.read_csv(os.path.realpath(os.path.join(
-                           os.path.dirname(__file__),
-                           'text_corpus_stats/result.csv')),
-                          )
+        return pd.read_csv(os.path.realpath(os.path.join(os.path.dirname(__file__),'text_corpus_stats/result.csv')),)
     
     @property
     def process_status(self):
@@ -89,52 +82,33 @@ class TextCoprusProcessor:
 
 class TextCorpusStatsCreator:
 
-    def __init__(self, result_df: pd.DataFrame | None = None,
-                 load_word_df: bool = False) -> None:
-        self._stats_base_path = (os.path.realpath(os.path.join(
-            os.path.dirname(__file__), 'text_corpus_stats'
-        )))
+    def __init__(self, result_df: pd.DataFrame | None = None, load_word_df: bool = False) -> None:
+        self._stats_base_path = (os.path.realpath(os.path.join(os.path.dirname(__file__), 'text_corpus_stats')))
         if isinstance(result_df, pd.DataFrame):
             self._result_df = result_df
         else:
-            self._result_df = pd.read_csv(os.path.realpath(os.path.join(
-                self._stats_base_path, 'result.csv'
-            )))
+            self._result_df = pd.read_csv(os.path.realpath(os.path.join(self._stats_base_path, 'result.csv')))
         self._word_df: pd.DataFrame | None = None
         if load_word_df:
-            self._word_df = pd.read_csv(os.path.realpath(os.path.join(
-                self._stats_base_path, 'word_stats.csv'
-            ))) 
+            self._word_df = pd.read_csv(os.path.realpath(os.path.join(self._stats_base_path, 'word_stats.csv'))) 
 
     def _create_word_stats(self) -> None:
         self._word_df = self._result_df
-        self._word_df['absolute_frequency'] = (self._word_df.groupby(by=['word', 'tag'])
-                                               ['lemma'].transform('count'))
+        self._word_df['absolute_frequency'] = (self._word_df.groupby(by=['word', 'tag'])['lemma'].transform('count'))
         self._word_df.drop_duplicates(inplace=True)                                        
-        self._word_df.to_csv(os.path.realpath(os.path.join(
-                      self._stats_base_path, 'word_stats.csv')), index=False
-                      )
+        self._word_df.to_csv(os.path.realpath(os.path.join(self._stats_base_path, 'word_stats.csv')), index=False)
     
     def _create_lemma_stats(self):
-        result = (self._word_df.groupby(by=['lemma', 'part_of_speech'])
-                  .agg({'absolute_frequency': 'sum'}).reset_index())
-        result.to_csv(os.path.realpath(os.path.join(
-            self._stats_base_path, 'lemma_stats.csv'
-        )), index=False)
+        result = (self._word_df.groupby(by=['lemma', 'part_of_speech']).agg({'absolute_frequency': 'sum'}).reset_index())
+        result.to_csv(os.path.realpath(os.path.join(self._stats_base_path, 'lemma_stats.csv')), index=False)
 
     def _create_pos_stats(self):
-        result = (self._word_df.groupby(by=['part_of_speech'])
-                  .agg({'absolute_frequency': 'count'}).reset_index())
-        result.to_csv(os.path.realpath(os.path.join(
-            self._stats_base_path, 'pos_stats.csv'
-        )), index=False)
+        result = (self._word_df.groupby(by=['part_of_speech']).agg({'absolute_frequency': 'count'}).reset_index())
+        result.to_csv(os.path.realpath(os.path.join(self._stats_base_path, 'pos_stats.csv')), index=False)
 
     def _create_tag_stats(self):
-        result = (self._word_df.groupby(by=['tag'])
-                  .agg({'absolute_frequency': 'count'}).reset_index())
-        result.to_csv(os.path.realpath(os.path.join(
-            self._stats_base_path, 'tag_stats.csv'
-        )), index=False)    
+        result = (self._word_df.groupby(by=['tag']).agg({'absolute_frequency': 'count'}).reset_index())
+        result.to_csv(os.path.realpath(os.path.join(self._stats_base_path, 'tag_stats.csv')), index=False)    
 
     def create_all_stats(self):
         self._create_word_stats()
@@ -154,17 +128,11 @@ class TextCorpusQueryHandler:
     
     def __init__(self) -> None:
         self._nlp = spacy.load('en_core_web_md')        
-        self._stats_base_path = (os.path.realpath(os.path.join(
-            os.path.dirname(__file__), 'text_corpus_stats'
-        )))          
+        self._stats_base_path = (os.path.realpath(os.path.join(os.path.dirname(__file__), 'text_corpus_stats')))          
     
     def query_word_stats(self, phrase: str):        
-        word_df = pd.read_csv(os.path.realpath(os.path.join(
-            self._stats_base_path, 'word_stats.csv'
-        )))
-        lemma_df = pd.read_csv(os.path.realpath(os.path.join(
-            self._stats_base_path, 'lemma_stats.csv'
-        )))
+        word_df = pd.read_csv(os.path.realpath(os.path.join(self._stats_base_path, 'word_stats.csv')))
+        lemma_df = pd.read_csv(os.path.realpath(os.path.join(self._stats_base_path, 'lemma_stats.csv')))
         tokens = self._nlp(phrase)
         result_stats = {}
         for token in tokens:
@@ -177,9 +145,7 @@ class TextCorpusQueryHandler:
                                           (word_df['part_of_speech'] == token.pos_)]
             word_forms_stats_dict = {}
             for row in word_forms_stats_df.values:                
-                word_forms_stats_dict[row[0]] = {'tag': row[3],
-                                                 'word_frequency': row[4]
-                                                }            
+                word_forms_stats_dict[row[0]] = {'tag': row[3], 'word_frequency': row[4]}            
             result_stats[word] = {
                 'lemma': token.lemma_,
                 'lemma_frequency': lemma_frequency,
@@ -188,31 +154,20 @@ class TextCorpusQueryHandler:
         return result_stats
     
     def query_pos_tag_stats(self):
-        pos_df = pd.read_csv(os.path.realpath(os.path.join(
-            self._stats_base_path, 'pos_stats.csv'
-        )))
-        tag_df = pd.read_csv(os.path.realpath(os.path.join(
-            self._stats_base_path, 'tag_stats.csv'
-        )))
+        pos_df = pd.read_csv(os.path.realpath(os.path.join(self._stats_base_path, 'pos_stats.csv')))
+        tag_df = pd.read_csv(os.path.realpath(os.path.join(self._stats_base_path, 'tag_stats.csv')))
         result_stats = {
             'pos': {row[0]: row[1] for row in pos_df.values},
-            'tag': {row[0]: row[1] for row in tag_df.values}
-        }
+            'tag': {row[0]: row[1] for row in tag_df.values}}
         return result_stats
     
     def get_raw_word_df(self):
-        word_df = pd.read_csv(os.path.realpath(os.path.join(
-            self._stats_base_path, 'word_stats.csv'
-        )))
+        word_df = pd.read_csv(os.path.realpath(os.path.join(self._stats_base_path, 'word_stats.csv')))
         return word_df
 
     def set_raw_word_df(self, word_df: pd.DataFrame):
-        word_df.to_csv(os.path.realpath(os.path.join(
-                self._stats_base_path, 'word_stats.csv')), index=False
-        )
-        stats_creator = TextCorpusStatsCreator(
-            result_df=None, load_word_df=True
-        )
+        word_df.to_csv(os.path.realpath(os.path.join(self._stats_base_path, 'word_stats.csv')), index=False)
+        stats_creator = TextCorpusStatsCreator(result_df=None, load_word_df=True)
         stats_creator.recount_auto_created_stats()
 
 

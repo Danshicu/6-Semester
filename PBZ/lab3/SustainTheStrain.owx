@@ -1,0 +1,1158 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain">
+    <Prefix name="" IRI="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="SustainTheStrain" IRI="http://www.semanticweb.org/dansh/ontologies/2024/3/SustainTheStrain#"/>
+    <Declaration>
+        <Class IRI="#Ability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Building"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Character"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Control"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Controller"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoreMechanic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CreationTool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Currency"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Department"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DocumentCreationTool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Effect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Energy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Environment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GameDesign"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GameEngine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GameplayElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Genre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mechanic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Money"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NarrativeElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#POV"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlaceOfAction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Platform"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Robot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Setting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Story"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Style"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SubMechanic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Team"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Technic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Turret"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Visual"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VisualCreationTool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Worker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#World"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Beat"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#BelongsTeam"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Generates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ToolOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Uses"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#WorksOver"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#AttackRadius"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#BuildCost"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#BuyCost"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Damage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Duration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Health"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ReloadTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Speed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#UseCost"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#health"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Barrack"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Blender"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Blow"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bridge"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Building_Robots_Revolution"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Citadel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Construction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Destruction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Enemy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Explosion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fast_Robot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Figthing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Freeze"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gamedesign_department"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Isometry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Landing_Robot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Laser"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Laser_Turret"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Main_Robot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mine"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mouse_and_Keyboard"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Notion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Photoshop"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Place_of_building"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Player"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Power_Station"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pramchuk_Daniil"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Realism"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rocket"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rocket_Turret"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shoot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shooting"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sustain_The_Strain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tank_Robot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tower_Defence"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Traveling"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Unity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Unity_Development_Department"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Visual_2D_Department"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Visual_3D_Department"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#3DSMax"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Ability"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Building"/>
+        <Class IRI="#CoreMechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Character"/>
+        <Class IRI="#Setting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Control"/>
+        <Class IRI="#GameDesign"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Controller"/>
+        <Class IRI="#Control"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CoreMechanic"/>
+        <Class IRI="#Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CreationTool"/>
+        <Class IRI="#Technic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Currency"/>
+        <Class IRI="#CoreMechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Department"/>
+        <Class IRI="#Technic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DocumentCreationTool"/>
+        <Class IRI="#CreationTool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Effect"/>
+        <Class IRI="#Visual"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Energy"/>
+        <Class IRI="#Currency"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entity"/>
+        <Class IRI="#CoreMechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Environment"/>
+        <Class IRI="#World"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GameEngine"/>
+        <Class IRI="#CreationTool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GameplayElement"/>
+        <Class IRI="#Environment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Genre"/>
+        <Class IRI="#GameDesign"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mechanic"/>
+        <Class IRI="#GameDesign"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Model"/>
+        <Class IRI="#Visual"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Money"/>
+        <Class IRI="#Currency"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Name"/>
+        <Class IRI="#GameDesign"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NarrativeElement"/>
+        <Class IRI="#Environment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#POV"/>
+        <Class IRI="#GameDesign"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlaceOfAction"/>
+        <Class IRI="#World"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Platform"/>
+        <Class IRI="#Technic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Robot"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Setting"/>
+        <Class IRI="#GameDesign"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Story"/>
+        <Class IRI="#Setting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Style"/>
+        <Class IRI="#Visual"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SubMechanic"/>
+        <Class IRI="#Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Team"/>
+        <Class IRI="#SubMechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Turret"/>
+        <Class IRI="#Building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Turret"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VisualCreationTool"/>
+        <Class IRI="#CreationTool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Worker"/>
+        <Class IRI="#Department"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#World"/>
+        <Class IRI="#Setting"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Building"/>
+        <NamedIndividual IRI="#Barrack"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GameplayElement"/>
+        <NamedIndividual IRI="#Barrack"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Uses"/>
+            <Class IRI="#Money"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Barrack"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VisualCreationTool"/>
+        <NamedIndividual IRI="#Blender"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Effect"/>
+        <NamedIndividual IRI="#Blow"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GameplayElement"/>
+        <NamedIndividual IRI="#Bridge"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Story"/>
+        <NamedIndividual IRI="#Building_Robots_Revolution"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Building"/>
+        <NamedIndividual IRI="#Citadel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GameplayElement"/>
+        <NamedIndividual IRI="#Citadel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PlaceOfAction"/>
+        <NamedIndividual IRI="#Construction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Style"/>
+        <NamedIndividual IRI="#Construction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Effect"/>
+        <NamedIndividual IRI="#Destruction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Team"/>
+        <NamedIndividual IRI="#Enemy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ability"/>
+        <NamedIndividual IRI="#Explosion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Uses"/>
+            <Class IRI="#Energy"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Explosion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Robot"/>
+        <NamedIndividual IRI="#Fast_Robot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SubMechanic"/>
+        <NamedIndividual IRI="#Figthing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ability"/>
+        <NamedIndividual IRI="#Freeze"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Uses"/>
+            <Class IRI="#Energy"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Freeze"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Department"/>
+        <NamedIndividual IRI="#Gamedesign_department"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#POV"/>
+        <NamedIndividual IRI="#Isometry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ability"/>
+        <NamedIndividual IRI="#Landing_Robot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Robot"/>
+        <NamedIndividual IRI="#Landing_Robot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Beat"/>
+            <Class IRI="#Robot"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Landing_Robot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Effect"/>
+        <NamedIndividual IRI="#Laser"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Turret"/>
+        <NamedIndividual IRI="#Laser_Turret"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Beat"/>
+            <Class IRI="#Robot"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Laser_Turret"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Uses"/>
+            <Class IRI="#Money"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Laser_Turret"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Robot"/>
+        <NamedIndividual IRI="#Main_Robot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Beat"/>
+            <Class IRI="#Robot"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Main_Robot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SubMechanic"/>
+        <NamedIndividual IRI="#Mine"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Generates"/>
+            <Class IRI="#Money"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Mine"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Controller"/>
+        <NamedIndividual IRI="#Mouse_and_Keyboard"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DocumentCreationTool"/>
+        <NamedIndividual IRI="#Notion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Platform"/>
+        <NamedIndividual IRI="#PC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VisualCreationTool"/>
+        <NamedIndividual IRI="#Photoshop"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Building"/>
+        <NamedIndividual IRI="#Place_of_building"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Team"/>
+        <NamedIndividual IRI="#Player"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Building"/>
+        <NamedIndividual IRI="#Power_Station"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Generates"/>
+            <Class IRI="#Energy"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Power_Station"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Worker"/>
+        <NamedIndividual IRI="#Pramchuk_Daniil"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#WorksOver"/>
+            <Class IRI="#GameDesign"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Pramchuk_Daniil"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#WorksOver"/>
+            <Class IRI="#Technic"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Pramchuk_Daniil"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#WorksOver"/>
+            <Class IRI="#Visual"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Pramchuk_Daniil"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Style"/>
+        <NamedIndividual IRI="#Realism"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Effect"/>
+        <NamedIndividual IRI="#Rocket"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Turret"/>
+        <NamedIndividual IRI="#Rocket_Turret"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Beat"/>
+            <Class IRI="#Robot"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Rocket_Turret"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Uses"/>
+            <Class IRI="#Money"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Rocket_Turret"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Effect"/>
+        <NamedIndividual IRI="#Shoot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CoreMechanic"/>
+        <NamedIndividual IRI="#Shooting"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Name"/>
+        <NamedIndividual IRI="#Sustain_The_Strain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Robot"/>
+        <NamedIndividual IRI="#Tank_Robot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Tower_Defence"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SubMechanic"/>
+        <NamedIndividual IRI="#Traveling"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GameEngine"/>
+        <NamedIndividual IRI="#Unity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Department"/>
+        <NamedIndividual IRI="#Unity_Development_Department"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Department"/>
+        <NamedIndividual IRI="#Visual_2D_Department"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Department"/>
+        <NamedIndividual IRI="#Visual_3D_Department"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VisualCreationTool"/>
+        <NamedIndividual IRI="#3DSMax"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#BelongsTeam"/>
+        <NamedIndividual IRI="#Barrack"/>
+        <NamedIndividual IRI="#Player"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Generates"/>
+        <NamedIndividual IRI="#Barrack"/>
+        <NamedIndividual IRI="#Main_Robot"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ToolOf"/>
+        <NamedIndividual IRI="#Blender"/>
+        <NamedIndividual IRI="#Visual_3D_Department"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#BelongsTeam"/>
+        <NamedIndividual IRI="#Citadel"/>
+        <NamedIndividual IRI="#Player"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#BelongsTeam"/>
+        <NamedIndividual IRI="#Explosion"/>
+        <NamedIndividual IRI="#Player"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#BelongsTeam"/>
+        <NamedIndividual IRI="#Fast_Robot"/>
+        <NamedIndividual IRI="#Enemy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#BelongsTeam"/>
+        <NamedIndividual IRI="#Freeze"/>
+        <NamedIndividual IRI="#Player"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#BelongsTeam"/>
+        <NamedIndividual IRI="#Landing_Robot"/>
+        <NamedIndividual IRI="#Player"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#BelongsTeam"/>
+        <NamedIndividual IRI="#Laser_Turret"/>
+        <NamedIndividual IRI="#Player"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#BelongsTeam"/>
+        <NamedIndividual IRI="#Main_Robot"/>
+        <NamedIndividual IRI="#Player"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#BelongsTeam"/>
+        <NamedIndividual IRI="#Mine"/>
+        <NamedIndividual IRI="#Player"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ToolOf"/>
+        <NamedIndividual IRI="#Notion"/>
+        <NamedIndividual IRI="#Gamedesign_department"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ToolOf"/>
+        <NamedIndividual IRI="#Photoshop"/>
+        <NamedIndividual IRI="#Visual_2D_Department"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#BelongsTeam"/>
+        <NamedIndividual IRI="#Place_of_building"/>
+        <NamedIndividual IRI="#Player"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#BelongsTeam"/>
+        <NamedIndividual IRI="#Rocket_Turret"/>
+        <NamedIndividual IRI="#Player"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#BelongsTeam"/>
+        <NamedIndividual IRI="#Tank_Robot"/>
+        <NamedIndividual IRI="#Enemy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ToolOf"/>
+        <NamedIndividual IRI="#Unity"/>
+        <NamedIndividual IRI="#Unity_Development_Department"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ToolOf"/>
+        <NamedIndividual IRI="#3DSMax"/>
+        <NamedIndividual IRI="#Visual_3D_Department"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BuildCost"/>
+        <NamedIndividual IRI="#Barrack"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BuyCost"/>
+        <NamedIndividual IRI="#Blender"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Duration"/>
+        <NamedIndividual IRI="#Blow"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#health"/>
+        <NamedIndividual IRI="#Citadel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">200</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Duration"/>
+        <NamedIndividual IRI="#Destruction"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">10.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AttackRadius"/>
+        <NamedIndividual IRI="#Explosion"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Damage"/>
+        <NamedIndividual IRI="#Explosion"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ReloadTime"/>
+        <NamedIndividual IRI="#Explosion"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">10.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AttackRadius"/>
+        <NamedIndividual IRI="#Fast_Robot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Damage"/>
+        <NamedIndividual IRI="#Fast_Robot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Health"/>
+        <NamedIndividual IRI="#Fast_Robot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">35</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Speed"/>
+        <NamedIndividual IRI="#Fast_Robot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AttackRadius"/>
+        <NamedIndividual IRI="#Freeze"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Duration"/>
+        <NamedIndividual IRI="#Freeze"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">3.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ReloadTime"/>
+        <NamedIndividual IRI="#Freeze"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">15.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AttackRadius"/>
+        <NamedIndividual IRI="#Landing_Robot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Damage"/>
+        <NamedIndividual IRI="#Landing_Robot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">35</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Health"/>
+        <NamedIndividual IRI="#Landing_Robot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">40</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Speed"/>
+        <NamedIndividual IRI="#Landing_Robot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Duration"/>
+        <NamedIndividual IRI="#Laser"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AttackRadius"/>
+        <NamedIndividual IRI="#Laser_Turret"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BuildCost"/>
+        <NamedIndividual IRI="#Laser_Turret"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Damage"/>
+        <NamedIndividual IRI="#Laser_Turret"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">40</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AttackRadius"/>
+        <NamedIndividual IRI="#Main_Robot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Damage"/>
+        <NamedIndividual IRI="#Main_Robot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Health"/>
+        <NamedIndividual IRI="#Main_Robot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">70</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Speed"/>
+        <NamedIndividual IRI="#Main_Robot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BuyCost"/>
+        <NamedIndividual IRI="#Notion"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BuyCost"/>
+        <NamedIndividual IRI="#Photoshop"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">23</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BuildCost"/>
+        <NamedIndividual IRI="#Power_Station"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">300</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Duration"/>
+        <NamedIndividual IRI="#Rocket"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">5.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AttackRadius"/>
+        <NamedIndividual IRI="#Rocket_Turret"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BuildCost"/>
+        <NamedIndividual IRI="#Rocket_Turret"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Damage"/>
+        <NamedIndividual IRI="#Rocket_Turret"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Duration"/>
+        <NamedIndividual IRI="#Shoot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AttackRadius"/>
+        <NamedIndividual IRI="#Tank_Robot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Damage"/>
+        <NamedIndividual IRI="#Tank_Robot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">45</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Health"/>
+        <NamedIndividual IRI="#Tank_Robot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">90</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Speed"/>
+        <NamedIndividual IRI="#Tank_Robot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BuyCost"/>
+        <NamedIndividual IRI="#Unity"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BuyCost"/>
+        <NamedIndividual IRI="#3DSMax"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">235</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Beat"/>
+        <Class IRI="#Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#BelongsTeam"/>
+        <Class IRI="#Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Generates"/>
+        <Class IRI="#Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ToolOf"/>
+        <Class IRI="#CreationTool"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Uses"/>
+        <Class IRI="#Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#WorksOver"/>
+        <Class IRI="#Worker"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Beat"/>
+        <Class IRI="#Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#BelongsTeam"/>
+        <Class IRI="#Team"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Generates"/>
+        <Class IRI="#Currency"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ToolOf"/>
+        <Class IRI="#Department"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Uses"/>
+        <Class IRI="#Currency"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#WorksOver"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#AttackRadius"/>
+        <Class IRI="#Entity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#BuildCost"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#BuyCost"/>
+        <Class IRI="#CreationTool"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Damage"/>
+        <Class IRI="#Entity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Duration"/>
+        <Class IRI="#Effect"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Health"/>
+        <Class IRI="#Robot"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ReloadTime"/>
+        <Class IRI="#Ability"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Speed"/>
+        <Class IRI="#Robot"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#UseCost"/>
+        <Class IRI="#Ability"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#health"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#AttackRadius"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#BuildCost"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#BuyCost"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Damage"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Duration"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Health"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ReloadTime"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Speed"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#UseCost"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#health"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
